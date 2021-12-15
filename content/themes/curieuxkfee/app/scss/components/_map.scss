@@ -1,0 +1,71 @@
+////////// Map //////////
+main {
+  .map {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+
+    strong {
+      address {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2em;
+      
+        span {
+          width: 100%;
+          margin-bottom: 0.25em;
+          font-size: 1.75em;
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: $breakpoint-small) {
+  main {
+    .map {
+      margin-bottom: 2.5em;
+      
+      strong {
+        address {
+          margin-bottom: 2.5em;
+            
+          span {
+            font-size: 2em;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: $breakpoint-medium) {
+  main {
+    .map {
+      flex-direction: column;
+      margin-bottom: 3em;
+          
+      strong {
+        address {
+          margin-bottom: 3em;
+                
+          span {
+            font-size: 2.25em;
+          }
+        }
+      }
+
+      iframe {
+        width: 80%;
+        height: 750px;
+      }
+    }
+  }
+}

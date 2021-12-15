@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+
+// 1. Abstracts
+@import 
+  'abstracts/vars';
+
+// 2. Vendors
+@import 
+  '~font-awesome/scss/font-awesome';
+
+// 3. Base
+@import
+  'base/animations',
+  'base/base',
+  'base/typographies';
+
+// 4. Layout
+@import
+  'layout/header',
+  'layout/main',
+  'layout/footer';
+
+// 5. Components
+@import 
+  'components/banner',
+  'components/categories',
+  'components/concepts',
+  'components/contact-us',
+  'components/content',
+  'components/copyright',
+  'components/events',
+  'components/intro',
+  'components/links',
+  'components/map',
+  'components/nav',
+  'components/opening-hours',
+  'components/product',
+  'components/simplified-logo',
+  'components/social-media';
+
+// 6. Pages

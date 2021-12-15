@@ -1,0 +1,36 @@
+////////// Simplified Logo //////////
+footer {
+  .simplified-logo {
+    width: 45%;
+    height: 45%;
+    margin: 1.5em auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      // object-fit: fill;
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: $breakpoint-small) {
+  footer {
+    .simplified-logo {
+      width: 27.5%;
+      height: 27.5%;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: $breakpoint-medium) {
+  footer {
+    .simplified-logo {
+      width: 15%;
+      height: 15%;
+      transform: translateX(37.5px);
+    }
+  }
+}

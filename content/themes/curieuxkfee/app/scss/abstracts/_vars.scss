@@ -1,0 +1,34 @@
+// Variables (fonts, colors, sizes, breakpoints)
+// Fonts + Font Awesome 4.7.0 Icons
+$fa-font-path: '~font-awesome/fonts';
+$font-family-title: 'supernovaregular', serif;
+$font-family-subtitle: 'estelly', cursive;
+
+// Colors
+$white: hsl(0, 0%, 100%); // ou rgb(255, 255, 255), ou #fff
+$black: hsl(0, 0%, 0%); // ou rgb(0, 0, 0), ou #000
+$cream: hsl(39, 59%, 88%); // ou rgb(243, 231, 208), ou #f3e7d0
+$caramel-coffee: hsl(40, 70%, 67%); // ou rgb(230, 191, 113), ou #e6bf71
+$grey: hsl(340, 2%, 37%); // ou rgb(95, 92, 93), ou #5f5c5d
+$cappuccino: hsl(33, 33%, 61%); // ou rgb(188, 159, 123), ou #bc9f7b
+$cream-coffee: hsl(33, 59%, 83%); // ou rgb(237, 214, 185), ou #edd6b9
+
+// $bg: linear-gradient(135deg, $black 0%, #0A0A0A 50%, #141414 100%);
+// $alpha-glass: 0.05;
+// $alpha-hover: 0.75;
+// $glass: rgba($white, $alpha-glass);
+// $hover-red: rgba($red, $alpha-hover);
+// $box-shadow-white: 1px 1px 1.5px 1.5px rgba($white, 0.5);
+// $border-radius-small: 10px;
+// $border-radius-medium: 15px;
+
+// Mobile
+
+// Tablet
+
+// Desktop
+
+// Breakpoints
+$breakpoint-small: 768px;
+$breakpoint-medium:	992px;
+// $breakpoint-large: 1200px;

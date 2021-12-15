@@ -3,6 +3,7 @@
 /wp-config.php
 /content/plugins/*
 /content/themes/*
+!/content/themes/curieuxkfee
 /content/languages
 /content/upgrade
 /content/uploads

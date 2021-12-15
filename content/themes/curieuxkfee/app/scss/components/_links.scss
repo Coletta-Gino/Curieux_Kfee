@@ -1,0 +1,32 @@
+////////// Links //////////
+footer {
+  .links {
+    li {
+      list-style: none;
+      text-align: center;
+      padding-bottom: 0.5em;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      a {
+        color: $cream-coffee;
+        text-decoration: none;
+        // font-size: 14px;
+        // font-weight: bold;
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: $breakpoint-small) {
+  footer {
+    .links {
+      li {
+        text-align: left;
+      }
+    }
+  }
+}

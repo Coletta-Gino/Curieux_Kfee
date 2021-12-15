@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'supernovaregular';
+  src: url('/content/themes/curieuxkfee/app/fonts/Supernova.ttf') format('truetype'),
+       url('/content/themes/curieuxkfee/app/fonts/supernova-webfont.woff2') format('woff2'),
+       url('/content/themes/curieuxkfee/app/fonts/supernova-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'estellyregular';
+  src: url('/content/themes/curieuxkfee/app/fonts/Estelly.ttf') format('truetype')
+       url('/content/themes/curieuxkfee/app/fonts/estelly-webfont.woff2') format('woff2'),
+       url('/content/themes/curieuxkfee/app/fonts/estelly-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Font "Curieux kfée"
+// @font-face {
+//   font-family: 'supernovaregular';
+//   src: url('supernova-webfont.woff2') format('woff2'),
+//        url('supernova-webfont.woff') format('woff'),
+//        url('Supernova.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// Font "Café Boutique"
+// @font-face {
+//   font-family: 'estelly';
+//   src: url('estelly-webfont.woff2') format('woff2'),
+//        url('estelly-webfont.woff') format('woff'),
+//        url('estelly-webfont.ttf') format('truetype'),
+//        url('estelly-webfont.svg#estellyregular') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }

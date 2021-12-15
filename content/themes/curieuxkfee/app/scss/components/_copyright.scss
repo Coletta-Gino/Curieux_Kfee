@@ -1,0 +1,26 @@
+////////// Copyright //////////
+footer {
+  .copyright {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      color: $cream-coffee;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+  
+// Tablet
+@media screen and (min-width: $breakpoint-small) {
+  footer {
+    .copyright {
+      margin-top: 1.5em;
+    }
+  }
+}

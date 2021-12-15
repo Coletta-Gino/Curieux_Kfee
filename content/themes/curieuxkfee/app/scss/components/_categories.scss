@@ -1,0 +1,47 @@
+////////// Categories //////////
+main {
+  .categories {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 1.85em;
+
+    button {
+      margin-right: 10px;
+      padding: 0.5em 1em;
+      border: solid 1px $cappuccino;
+      border-radius: 10px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: $breakpoint-small) {
+  main {
+    .categories {
+      margin-bottom: 2.35em;
+    
+      button {
+        margin-right: 12.5px;
+        padding: 0.75em 1.5em;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: $breakpoint-medium) {
+  main {
+    .categories {
+      margin-bottom: 2.85em;
+      
+      button {
+        margin-right: 15px;
+        padding: 1em 2em;
+      }
+    }
+  }
+}

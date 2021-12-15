@@ -1,0 +1,144 @@
+////////// Contents //////////
+main {
+  .wrapper {
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+      margin-bottom: 2.5em;
+
+      h2 {
+        width: 100%;
+        margin-bottom: 0.85em;
+      }
+
+      ///// Picture /////
+      &__picture {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        border: solid 1px $black;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      ///// Description /////
+      &__desc {
+        margin-top: 1.5em;
+
+        p {
+          width: 100%;
+          text-align: justify;
+          margin-bottom: 2.15em;
+        }
+    
+        a {
+          text-decoration: none;
+          color: $cappuccino;
+          background-color: $grey;
+          padding: 0.75em 1.5em;
+          border-radius: 5px;
+        }
+      }
+
+      &:nth-child(even) {
+        justify-content: right;
+        text-align: right;
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: $breakpoint-small) {
+  main {
+    .wrapper {
+      .content {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0 auto 3em;
+
+        h2 {
+          margin-bottom: 1.35em;
+        }
+
+        ///// Picture /////
+        &__picture {
+          width: 50%;
+          height: 250px;
+        }
+
+        ///// Description /////
+        &__desc {
+          width: 40%;
+          margin: 2em auto;
+
+          p {
+            margin-bottom: 2.65em;
+          }
+      
+          a {
+            padding: 1em 2em;
+          }
+        }
+
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: $breakpoint-medium) {
+  main {
+    .wrapper {
+      width: 100%;
+      display: flex;
+
+      .content {
+        width: 50%;
+        margin: 0 auto 3.5em;
+
+        h2 {
+          margin-bottom: 1.85em;
+        }
+
+        ///// Picture /////
+        &__picture {
+          width: 50%;
+          height: 350px;
+        }
+
+        ///// Description /////
+        &__desc {
+          margin: 2.5em auto;
+
+          p {
+            text-align: left;
+            margin-bottom: 3.15em;
+          }
+      
+          a {
+            padding: 1.25em 2.5em;
+          }
+        }
+
+        &:nth-child(even) {
+          border-left: dotted 2.5px $cappuccino;
+
+          p {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+////////// Navbar //////////
+header {
+  nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    background-color: $grey;
+    padding: 0 1em;
+    z-index: 99;
+
+    .logo {
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        color: $cappuccino;
+        // text-transform: uppercase;
+        // letter-spacing: 2.5px;
+      }
+    }
+
+    ///// Menu Items /////
+    .nav-links {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 100%;
+      height: 92vh;
+      background-color: $grey;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+
+      li {
+        list-style: none;
+        opacity: 0;
+        padding-bottom: 2.5em;
+
+        &:first-child {
+          margin-top: -5em;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+
+        a {
+          color: $cappuccino;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: bold;
+          letter-spacing: 3px;
+        }
+      }
+
+      &.nav-active {
+        transform: translateX(0%);
+      }
+    }
+
+    ///// Menu Burger /////
+    .burger {
+      display: block;
+      cursor: pointer;
+
+      div {
+        width: 35px;
+        height: 5px;
+        background-color: $cappuccino;
+        margin: 6px 0;
+        transition: all 0.4s;
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: $breakpoint-small) {
+  header {
+    nav {
+      padding: 0 2em;
+      
+      ///// Menu Items /////
+      .nav-links {
+        position: unset;
+        width: 60%;
+        height: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        transform: translateX(0);
+
+        li {
+          opacity: 1;
+          padding-bottom: 0;
+          
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+
+      ///// Menu Burger /////
+      .burger {
+        display: none;
+      }
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: $breakpoint-medium) {
+  header {
+    nav {
+      ///// Menu Items /////
+      .nav-links {
+        width: 40%;
+      }
+    }
+  }
+}

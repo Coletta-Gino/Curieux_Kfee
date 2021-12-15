@@ -1,0 +1,83 @@
+////////// Opening Hours //////////
+main {
+  .cmon {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    span {
+      width: 100%;
+      text-align: center;
+      letter-spacing: 2.5px;
+      margin-bottom: 1.5em;
+    }
+  }
+
+  .opening-hours {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 0 auto 2em;
+    list-style: none;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+      border-bottom: solid 1px $cappuccino;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: $breakpoint-small) {
+  main {
+    .cmon {
+      span {
+        letter-spacing: 3px;
+        margin-bottom: 2em;
+      }
+    }
+      
+    .opening-hours {
+      width: 70%;
+      margin: 0 auto 2.5em;
+      
+      li {
+        padding-bottom: 1.5em;
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: $breakpoint-medium) {
+  main {
+    .cmon {
+      span {
+        letter-spacing: 3.5px;
+        margin-bottom: 2.5em;
+      }
+    }
+          
+    .opening-hours {
+      width: 60%;
+      margin: 0 auto 3em;
+          
+      li {
+        padding-bottom: 2em;
+        margin-bottom: 2em;
+      }
+    }
+  }
+}

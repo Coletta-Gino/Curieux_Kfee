@@ -1,0 +1,170 @@
+////////// Products //////////
+main {
+  .container {
+    .product {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.85em;
+      padding: 1em;
+      border: solid 1px $cappuccino;
+
+      ///// Image /////
+      &__image {
+        width: 60%;
+        height: 225px;
+        margin-bottom: 2.75em;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          border: solid 1px $black;
+        }
+      }
+
+      ///// Informations /////
+      &__infos {
+        h2 {
+          text-align: center;
+          margin-bottom: 1.25em;
+        }
+    
+        p {
+          text-align: justify;
+          margin-bottom: 2.15em;
+        }
+    
+        .tags {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: left;
+          list-style: none;
+    
+          li {
+            a {
+              text-decoration: none;
+              margin-right: 15px;
+              color: $cappuccino;
+    
+              &::before {
+                content: '#';
+                margin-right: 2.5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: $breakpoint-small) {
+  main {
+    .container {
+      .product {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        margin-bottom: 2.35em !important;
+        padding: 1.5em !important;
+
+        ///// Image /////
+        &__image {
+          width: 45% !important;
+          height: 275px !important;
+          margin-bottom: 0 !important;
+        }
+
+        ///// Informations /////
+        &__infos {
+          width: 50% !important;
+
+          h2 {
+            margin-bottom: 1.75em !important;
+          }
+      
+          p {
+            margin-bottom: 2.65em !important;
+          }
+      
+          .tags {
+            li {
+              a {
+                margin-right: 20px !important;
+      
+                &::before {
+                  margin-right: 3px !important;
+                }
+              }
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          flex-direction: row-reverse !important;
+        }
+      }
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: $breakpoint-medium) {
+  main {
+    .container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      .product {
+        width: 48.5%;
+        margin-bottom: 2.85em !important;
+        padding: 2em !important;
+
+        ///// Image /////
+        &__image {
+          width: 40% !important;
+          height: 300px !important;
+        }
+
+        ///// Informations /////
+        &__infos {
+          h2 {
+            margin-bottom: 2.25em !important;
+          }
+      
+          p {
+            margin-bottom: 3.15em !important;
+          }
+      
+          .tags {
+            li {
+              a {
+                margin-right: 25px !important;
+      
+                &::before {
+                  margin-right: 3.5px !important;
+                }
+              }
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          flex-direction: inherit !important;
+        }
+
+        &:nth-child(4n-1),
+        &:nth-child(4n-2) { 
+          flex-direction: row-reverse !important;
+        }
+      }
+    }
+  }
+}

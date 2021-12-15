@@ -1,0 +1,47 @@
+////////// Map //////////
+main {
+  .contact-us {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: $grey;
+
+      i {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+  
+// Tablet
+@media screen and (min-width: $breakpoint-small) {
+  main {
+    .contact-us {
+      a {
+        i {
+          margin: 0 12.5px;
+        }
+      }
+    }
+  }
+}
+  
+// Desktop
+@media screen and (min-width: $breakpoint-medium) {
+  main {
+    .contact-us {
+      width: 80%;
+      margin: 0 auto;
+      
+      a {
+        i {
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+}

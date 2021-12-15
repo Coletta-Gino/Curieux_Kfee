@@ -1,0 +1,59 @@
+////////// Events //////////
+header {
+  .special-event {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    color: $grey;
+    background-color: $caramel-coffee;
+    font-size: 17px;
+
+    &.finished {
+      display: none;
+    }
+
+    a {
+      margin: 0 15px;
+      color: $cream;
+      text-decoration: none;
+      z-index: 8;
+    }
+
+    &__items {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      overflow-x: clip;
+
+      &__single {
+        padding: 0 15px;
+        animation: scrollTxt 10s linear infinite;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &.active {
+          animation: inherit;
+        }
+
+        strong {
+          text-transform: uppercase;
+        }
+
+        i {
+          margin: 0 5px;
+        }
+
+        span {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
