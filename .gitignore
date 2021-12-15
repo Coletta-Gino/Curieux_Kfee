@@ -4,8 +4,6 @@
 /content/plugins/*
 /content/themes/*
 !/content/themes/curieuxkfee
-/content/themes/curieuxkfee/app/fonts
-/content/themes/curieuxkfee/app/images
 /content/languages
 /content/upgrade
 /content/uploads
