@@ -1,6 +1,16 @@
   <!-- Introduction -->
   <section class="intro">
-    <h1>Histoire/Présentation</h1>
+    <?php  
+      $args = [
+        'post_type' => 'post',
+        'category_name' => 'home+intro',
+      ];
+        
+      $wpqueryArticles = new WP_Query($args);
+    ?>
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga quis ullam, expedita nesciunt ratione blanditiis dolore magnam aliquam quas, eos ab. Inventore repudiandae perspiciatis laboriosam!</p>
+    <?php if ($wpqueryArticles->have_posts()): while ($wpqueryArticles->have_posts()): $wpqueryArticles->the_post(); ?>
+      <h1><?php the_title(); ?></h1>
+      <?php the_content(); ?>
+    <?php endwhile; endif; ?>
   </section>

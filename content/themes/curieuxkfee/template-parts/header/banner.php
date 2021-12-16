@@ -3,9 +3,9 @@
     <?php  
       $args = [
         'post_type' => 'post',
-        'category__in' => 3,
+        'category_name' => 'header+banner',
       ];
-            
+        
       $wpqueryArticles = new WP_Query($args);
     ?>
 

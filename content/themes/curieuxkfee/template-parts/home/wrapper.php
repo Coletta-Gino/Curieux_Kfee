@@ -1,30 +1,27 @@
   <!-- Contents -->
   <div class="wrapper">
-    <article class="content">
-      <h2>Ephémère</h2>
-  
-      <div class="content__picture">
-        <img src="https://unsplash.com/photos/nNjxgeGuzAs" alt="">
-      </div>
-  
-      <div class="content__desc">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis consequuntur explicabo reiciendis, aspernatur eveniet a!</p>
+    <?php  
+      $args = [
+        'post_type' => 'post',
+        'orderby' => 'rand',
+        'category_name' => 'home+content',
+      ];
+          
+      $wpqueryArticles = new WP_Query($args);
+    ?>
+
+    <?php if ($wpqueryArticles->have_posts()): while ($wpqueryArticles->have_posts()): $wpqueryArticles->the_post(); ?>
+      <article class="content">  
+        <h2><?php the_title(); ?></h2>
         
-        <a href="#">CTA</a>
-      </div>
-    </article>
-  
-    <article class="content">
-      <h2>Permanent</h2>
-  
-      <div class="content__picture">
-        <img src="https://unsplash.com/photos/nNjxgeGuzAs" alt="">
-      </div>
-  
-      <div class="content__desc">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis consequuntur explicabo reiciendis, aspernatur eveniet a!</p>
-        
-        <a href="#">CTA</a>
-      </div>
-    </article>
+        <div class="content__picture">
+          <?php the_post_thumbnail(); ?>
+        </div>
+
+        <div class="content__desc">
+          <?php the_content(); ?>
+          <a href="#">CTA</a>
+        </div>
+      </article>
+    <?php endwhile; endif; ?>    
   </div>
