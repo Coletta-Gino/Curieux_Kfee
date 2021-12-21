@@ -52,6 +52,15 @@ header {
 
         span {
           text-transform: capitalize;
+          display: inline-flex;
+
+          p {
+            margin-left: 5px;
+
+            &:first-child {
+              margin-left: 0;
+            }
+          }
         }
       }
     }

@@ -15,7 +15,9 @@
     "require": {
         "johnpbloch/wordpress": "*",
         "wpackagist-theme/twentytwenty": "*",
-        "wpackagist-plugin/akismet": "*"
+        "wpackagist-plugin/akismet": "*",
+        "wpackagist-plugin/advanced-custom-fields": "*",
+        "wpackagist-plugin/advanced-custom-fields-font-awesome": "*"
     },
     "extra" : {
         "wordpress-install-dir": "wp",
