@@ -1,26 +1,31 @@
-  <!-- Contents -->
-  <div class="wrapper">
+  <!-- Product's Description -->
+  <div class="container">
     <?php  
       $args = [
         'post_type' => 'post',
         'orderby' => 'rand',
-        'category_name' => 'home+content',
+        'category_name' => 'permanent',
       ];
           
       $wpqueryArticles = new WP_Query($args);
     ?>
 
     <?php if ($wpqueryArticles->have_posts()): while ($wpqueryArticles->have_posts()): $wpqueryArticles->the_post(); ?>
-      <article class="content">  
-        <h2><?php the_title(); ?></h2>
-        
-        <div class="content__picture">
+      <article class="product">
+        <div class="product__image">
           <?php the_post_thumbnail(); ?>
         </div>
 
-        <div class="content__desc">
+        <div class="product__infos">
+          <h2><?php the_title(); ?></h2>
+
           <?php the_content(); ?>
-          <a href="<?php echo get_the_permalink(); ?>">Voir les produits</a>
+    
+          <ul class="tags">
+            <li><a href="#">ee</a></li>
+            <li><a href="#">gte</a></li>
+            <li><a href="#">kkh</a></li>
+          </ul>
         </div>
       </article>
     <?php endwhile; endif; ?>    

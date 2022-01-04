@@ -32,7 +32,7 @@ main {
 
         p {
           width: 100%;
-          text-align: justify;
+          text-align: left;
           margin-bottom: 2.15em;
         }
     
@@ -48,6 +48,10 @@ main {
       &:nth-child(even) {
         justify-content: right;
         text-align: right;
+
+        p {
+          text-align: right;
+        }
       }
     }
   }
@@ -91,10 +95,6 @@ main {
 
         &:nth-child(even) {
           flex-direction: row-reverse;
-
-          p {
-            text-align: right;
-          }
         }
       }
     }
