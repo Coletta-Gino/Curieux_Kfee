@@ -1,14 +1,13 @@
   <!-- Events/Promotions -->
   <?php 
-    $field = the_field('status');
-    if ($field == 'terminé') {
-      $value = 'finished';
-    } else {
+    if (get_field('status', 23)) {
       $value = '';
+    } else {
+      $value = ' finished';
     }
   ?>
 
-  <div class="special-event <?php echo $value; ?>">
+  <div class="special-event<?php echo $value; ?>">
     <a href="#"><i class="fa fa-pause-circle-o fa-2x" aria-hidden="true"></i></a>
 
     <div class="special-event__items offer">
