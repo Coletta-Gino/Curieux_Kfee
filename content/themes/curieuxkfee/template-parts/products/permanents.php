@@ -22,9 +22,14 @@
           <?php the_content(); ?>
     
           <ul class="tags">
-            <li><a href="#">ee</a></li>
-            <li><a href="#">gte</a></li>
-            <li><a href="#">kkh</a></li>
+            <?php 
+              $post_tags = get_the_tags(); 
+              if ($post_tags) { 
+                foreach($post_tags as $post_tag) { 
+                  echo '<li><a href="' . get_tag_link($post_tag) . '">' . $post_tag->name . '</a></li>';
+                } 
+              } 
+            ?>
           </ul>
         </div>
       </article>

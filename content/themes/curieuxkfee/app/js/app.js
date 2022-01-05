@@ -63,9 +63,6 @@ var app = {
             }
         });
 
-        /////////////// Display The Special Events Div ///////////////
-        // eventVisible.classList.remove('finished');
-
         /////////////// Events Div ///////////////
         eventInfinite = () => {
             var offerText = document.querySelector('.offer');
