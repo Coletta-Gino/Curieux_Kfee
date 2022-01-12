@@ -1,10 +1,38 @@
   <!-- Map -->
-  <div class="map">
-    <strong>
-      <address>
-        <span>31 rue Pierre Avit Nicolas</span>38150, Salaise-sur-Sanne, France
-      </address>
-    </strong>
+  <?php  
+    $args = [
+      'post_type' => 'post',
+      'category_name' => 'informations+map',
+    ];
+      
+    $wpqueryArticles = new WP_Query($args);
+  ?>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2804.2362801583718!2d4.817379515718062!3d45.34404244947373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f53d4bd162af9f%3A0x3bf675c7c90797d6!2s31%20Rue%20Pierre%20Avit%20Nicolas%2C%2038150%20Salaise-sur-Sanne%2C%20France!5e0!3m2!1sfr!2sus!4v1637677743552!5m2!1sfr!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  </div>
+  <?php if ($wpqueryArticles->have_posts()): while ($wpqueryArticles->have_posts()): $wpqueryArticles->the_post(); ?>
+    <div class="map">
+      <?php 
+        $location = get_field('map'); 
+        // var_dump($location);
+        if($location):
+          $zoom = esc_attr($location['zoom']);
+          $lat = esc_attr($location['lat']);
+          $lng = esc_attr($location['lng']);
+          $name = esc_attr($location['name']);
+          $post_code = esc_attr($location['post_code']);
+          $city = esc_attr($location['city']);
+          $country = esc_attr($location['country']);
+          $address = $post_code . ', ' . $city . ', ' . $country;
+      ?>
+
+        <strong>
+          <address>
+            <span><?php echo $name; ?></span><?php echo $address; ?>
+          </address>
+        </strong>
+
+        <div class="acf-map" data-zoom="<?php echo $zoom; ?>">
+          <div class="marker" data-lat="<?php echo $lat; ?>" data-lng="<?php echo $lng; ?>"></div>
+        </div>
+      <?php endif; ?>
+    </div>
+  <?php endwhile; endif; ?>

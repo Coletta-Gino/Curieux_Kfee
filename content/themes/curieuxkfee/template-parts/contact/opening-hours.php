@@ -14,12 +14,33 @@
     ?>
 
     <?php if ($wpqueryArticles->have_posts()): while ($wpqueryArticles->have_posts()): $wpqueryArticles->the_post(); ?>
-      <li><?php $field_name = get_field_object('monday_opening'); echo $field_name['label']; ?><span><?php the_field('monday_opening'); ?> - <?php the_field('monday_closing'); ?></span></li>
-      <li><?php $field_name = get_field_object('tuesday_opening'); echo $field_name['label']; ?><span><?php the_field('tuesday_opening'); ?> - <?php the_field('tuesday_closing'); ?></span></li>
-      <li><?php $field_name = get_field_object('wednesday_opening'); echo $field_name['label']; ?><span><?php the_field('wednesday_opening'); ?> - <?php the_field('wednesday_closing'); ?></span></li>
-      <li><?php $field_name = get_field_object('thursday_opening'); echo $field_name['label']; ?><span><?php the_field('thursday_opening'); ?> - <?php the_field('thursday_closing'); ?></span></li>
-      <li><?php $field_name = get_field_object('friday_opening'); echo $field_name['label']; ?><span><?php the_field('friday_opening'); ?> - <?php the_field('friday_closing'); ?></span></li>
-      <li><?php $field_name = get_field_object('saturday_opening'); echo $field_name['label']; ?><span><?php the_field('saturday_opening'); ?> - <?php the_field('saturday_closing'); ?></span></li>
-      <li><?php $field_name = get_field_object('sunday_opening'); echo $field_name['label']; ?><span><?php the_field('sunday_opening'); ?> - <?php the_field('sunday_closing'); ?></span></li>
+      <?php 
+        $days = [
+          'monday',
+          'tuesday',
+          'wednesday',
+          'thursday',
+          'friday',
+          'saturday',
+          'sunday'
+        ];
+
+        for ($i = 0; $i < 7; $i++) { 
+          $opening = get_field_object($days[$i].'_opening');
+          $closing = get_field_object($days[$i].'_closing');
+
+          if ($opening && $closing) {
+            $label = esc_attr($opening['label']);
+            $open = esc_attr($opening['value']);
+            $close = esc_attr($closing['value']);
+  
+            foreach ($days as $day) {
+              $day = '<li>' . $label . '<span>' . $open . ' - ' . $close . '</span></li>';
+            }
+          }
+
+          echo $day;
+        }
+      ?>
     <?php endwhile; endif; ?>
   </ul>
