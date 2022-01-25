@@ -75,6 +75,31 @@ var app = {
         }
 
         eventInfinite();
+
+        /////////////// Categories ///////////////
+        const btn = document.querySelectorAll('.categories button');
+        const product = document.querySelectorAll('.product');
+
+        btn.forEach(item => {
+            item.addEventListener('click', function() {
+                for(let i = 0; i < btn.length; i++) {
+                    btn[i].classList.remove('active');
+                }
+
+                item.classList.add('active');
+
+                // showproduct
+                product.forEach(show => {
+                    show.style.display = 'none';
+
+                    let products = item.textContent.toLowerCase();
+
+                    if(show.getAttribute('data-att') === products || products === 'tous') {
+                        show.style.display = '';
+                    }
+                })
+            })
+        })
     }
 };
 
