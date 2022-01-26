@@ -1,5 +1,7 @@
   <!-- Banner -->
   <section class="banner">
+    <?php get_search_form(); ?>
+    
     <?php  
       $args = [
         'post_type' => 'post',
