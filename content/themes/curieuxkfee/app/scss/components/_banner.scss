@@ -3,33 +3,183 @@ header {
   .banner {
     position: relative;
     width: 100%;
-    max-height: 92vh;
+    min-height: 100vh;
+    max-height: 100vh;
     display: flex;
-    // height: calc(100% - 50px - 8vh);
+    justify-content: center;
     background-size: cover;
     background-position: right;
     overflow-y: hidden;
 
     img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
     }
 
+    ///// Text /////
     p {
       position: absolute;
-      width: 40%;
-      top: 0;
-      display: flex;
-      justify-content: left;
-      padding: 5em;
+      width: 80%;
+      top: 15.5em;
       color: $cream-coffee;
+      text-align: center;
       z-index: 10;
     }
 
+    ///// Search Engine /////
     .searchform {
       position: absolute;
-      top: 10em;
-      padding: 5em;
+      top: 24.5em;
+      padding: 0.5em 1em;
+      background-color: rgba($black, 0.9);
+      border: solid 1px $cream-coffee;
+      border-radius: 25px;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+
+        input {
+          color: $cream-coffee;
+          background-color: transparent;
+          outline: none;
+          border: none;
+        }
+  
+        button {
+          color: $cream-coffee;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    ///// Anchor To Down /////
+    #anchor {
+      position: absolute;
+      bottom: 1.5em;
+      right: 1.5em;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        text-decoration: none;
+        color: $cream-coffee;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        backdrop-filter: blur(2px);
+        transition: 0.5s;
+        overflow: hidden;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50px;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.5);
+          transform: skewX(45deg) translateX(150px);
+          transition: 0.8s;
+        }
+  
+        &:hover {
+          transform: translateY(-10px);
+
+          &::before {
+            transform: skewX(45deg) translateX(-150px);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: $breakpoint-small) {
+  header {
+    .banner {
+      ///// Text /////
+      p {
+        width: 70%;
+        top: 17em;
+      }
+
+      ///// Search Engine /////
+      .searchform {
+        top: 24.75em;
+        width: 30%;
+        padding: 0.75em 1.5em;
+
+        div {
+          input {
+            width: 90%;
+          }
+        }
+      }
+
+      ///// Anchor To Down /////
+      #anchor {
+        a {
+          width: 45px;
+          height: 45px;
+
+          i {
+            font-size: 1.25em;
+          }
+    
+          &:hover {
+            transform: translateY(-15px);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: $breakpoint-medium) {
+  header {
+    .banner {
+      ///// Text /////
+      p {
+        top: 22em;
+      }
+
+      ///// Search Engine /////
+      .searchform {
+        top: 30.25em;
+        width: 25%;
+        padding: 1em 2em;
+
+        div {
+          input {
+            width: 95%;
+          }
+        }
+      }
+
+      ///// Anchor To Down /////
+      #anchor {
+        a {
+          width: 50px;
+          height: 50px;
+
+          i {
+            font-size: 1.5em;
+          }
+    
+          &:hover {
+            transform: translateY(-20px);
+          }
+        }
+      }
     }
   }
 }

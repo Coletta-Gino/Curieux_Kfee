@@ -1,0 +1,89 @@
+////////// Anchor To Up //////////
+footer {
+  #up {
+    position: absolute;
+    bottom: 3em;
+    right: 1.5em;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      text-decoration: none;
+      color: $cream-coffee;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      backdrop-filter: blur(2px);
+      transition: 0.5s;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        transform: skewX(45deg) translateX(150px);
+        transition: 0.8s;
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+
+        &::before {
+          transform: skewX(45deg) translateX(-150px);
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: $breakpoint-small) {
+  footer {
+    #up {
+      bottom: 0.5em;
+
+      a {
+        width: 45px;
+        height: 45px;
+
+        i {
+          font-size: 1.25em;
+        }
+  
+        &:hover {
+          transform: translateY(-15px);
+        }
+      }
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: $breakpoint-medium) {
+  footer {
+    #up {
+      bottom: 1.5em;
+
+      a {
+        width: 50px;
+        height: 50px;
+
+        i {
+          font-size: 1.5em;
+        }
+
+        &:hover {
+          transform: translateY(-20px);
+        }
+      }
+    }
+  }
+}

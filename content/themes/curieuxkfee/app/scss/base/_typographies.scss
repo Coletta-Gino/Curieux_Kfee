@@ -1,42 +1,91 @@
-@font-face {
-  font-family: 'supernovaregular';
-  src: url('/content/themes/curieuxkfee/app/fonts/Supernova.ttf') format('truetype'),
-       url('/content/themes/curieuxkfee/app/fonts/supernova-webfont.woff2') format('woff2'),
-       url('/content/themes/curieuxkfee/app/fonts/supernova-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'estellyregular';
-  src: url('/content/themes/curieuxkfee/app/fonts/Estelly.ttf') format('truetype')
-       url('/content/themes/curieuxkfee/app/fonts/estelly-webfont.woff2') format('woff2'),
-       url('/content/themes/curieuxkfee/app/fonts/estelly-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-// Font "Curieux kfée"
-// @font-face {
-//   font-family: 'supernovaregular';
-//   src: url('supernova-webfont.woff2') format('woff2'),
-//        url('supernova-webfont.woff') format('woff'),
-//        url('Supernova.ttf') format('truetype');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+header {
+  .special-event {
+    &__items {
+      &__single {
+        strong {
+          font-family: $font-family-title;
+        }
 
-// Font "Café Boutique"
-// @font-face {
-//   font-family: 'estelly';
-//   src: url('estelly-webfont.woff2') format('woff2'),
-//        url('estelly-webfont.woff') format('woff'),
-//        url('estelly-webfont.ttf') format('truetype'),
-//        url('estelly-webfont.svg#estellyregular') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+        span {
+          font-family: $font-family-content;
+        }
+      }
+    }
+  }
+
+  nav {
+    font-family: $font-family-title;
+  }
+
+  .banner {
+    font-family: $font-family-content;
+  }
+}
+
+main {
+  section {
+    h1 {
+      font-family: $font-family-title;
+    }
+
+    p {
+      font-family: $font-family-content;
+    }
+  }
+
+  .wrapper {
+    .content {
+      h2 {
+        font-family: $font-family-title;
+      }
+
+      &__desc {
+        font-family: $font-family-content;
+      }
+    }
+  }
+
+  .categories {
+    button {
+      font-family: $font-family-title;
+    }
+  }
+
+  .container {
+    .product {
+      &__infos {
+        h2 {
+          font-family: $font-family-title;
+        }
+
+        p,
+        .tags {
+          font-family: $font-family-content;
+        }
+      }
+    }
+  }
+
+  .cmon {
+    font-family: $font-family-title;
+  }
+
+  .opening-hours {
+    font-family: $font-family-content;
+  }
+
+  .map {
+    font-family: $font-family-content;
+  }
+
+  .contact-us {
+    font-family: $font-family-content;
+  }
+}
+
+footer {
+  font-family: $font-family-content;
+}

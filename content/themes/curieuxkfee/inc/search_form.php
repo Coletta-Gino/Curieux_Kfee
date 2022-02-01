@@ -3,7 +3,7 @@
 function my_search_form($form) {
     $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url('/') . '" >
                 <div>
-                <input type="text" placeholder="Chercher..." value="' . get_search_query() . '" name="s" id="s" />
+                <input type="search" placeholder="Chercher..." value="' . get_search_query() . '" name="s" id="s" />
 
                 <button type="submit" id="searchsubmit"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </div>

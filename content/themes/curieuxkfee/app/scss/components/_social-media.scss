@@ -7,13 +7,76 @@ footer {
     margin-bottom: 1.5em;
 
     a {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin-left: 1em;
       text-decoration: none;
       color: $cream-coffee;
-      font-size: 1.5em;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      // box-shadow: 0 5px 45px rgb(0 0 0 / 10%);
+      backdrop-filter: blur(2px);
+      transition: 0.5s;
+      overflow: hidden;
 
       &:first-child {
         margin-left: 0;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        transform: skewX(45deg) translateX(150px);
+        transition: 0.8s;
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+
+        .fa-envelope {
+          color: $caramel-coffee;
+        }
+
+        // .fa-phone {
+        //   color: ;
+        // }
+
+        .fa-facebook-square {
+          color: hsl(214, 89%, 52%);
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 36%;
+            left: 39%;
+            width: 9px;
+            height: 11.8px;
+            background-color: $white;
+            z-index: -8;
+          }
+        }
+
+        .fa-instagram {
+          background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+          -webkit-background-clip: text;
+              background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &::before {
+          transform: skewX(45deg) translateX(-150px);
+        }
       }
     }
   }
@@ -26,7 +89,23 @@ footer {
       margin-bottom: 0;
 
       a {
-        font-size: 2em;
+        width: 45px;
+        height: 45px;
+
+        i {
+          font-size: 1.25em;
+        }
+
+        &:hover {
+          transform: translateY(-15px);
+  
+          .fa-facebook-square {
+            &::after {
+              width: 11px;
+              height: 14px;
+            }
+          }
+        }
       }
     }
   }
@@ -37,7 +116,24 @@ footer {
   footer {
     .social-media {
       a {
-        font-size: 2.5em;
+        width: 50px;
+        height: 50px;
+
+        i {
+          font-size: 1.5em;
+        }
+
+        &:hover {
+          transform: translateY(-20px);
+  
+          .fa-facebook-square {
+            &::after {
+              top: 35%;
+              width: 13px;
+              height: 16.5px;
+            }
+          }
+        }
       }
     }
   }

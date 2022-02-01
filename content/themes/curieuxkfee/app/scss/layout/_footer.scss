@@ -13,7 +13,7 @@ footer {
 // Tablet
 @media screen and (min-width: $breakpoint-small) {
   footer {
-    flex-direction: unset;
+    flex-direction: row;
     justify-content: space-between;
     padding: 1.5em 1.5em 0.5em;
   }
@@ -22,6 +22,6 @@ footer {
 // Desktop
 @media screen and (min-width: $breakpoint-medium) {
   footer {
-    padding: 2em 2em 1em;
+    padding: 1em 2em;
   }
 }

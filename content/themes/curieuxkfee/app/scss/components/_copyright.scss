@@ -24,3 +24,12 @@ footer {
     }
   }
 }
+
+// Desktop
+@media screen and (min-width: $breakpoint-medium) {
+  footer {
+    .copyright {
+      margin-top: 2.25em;
+    }
+  }
+}
