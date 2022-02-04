@@ -1,5 +1,24 @@
 <?php get_header(); ?>
-  <?php get_template_part('template-parts/products/categories'); ?>
+  <!-- Categories -->
+  <section class="categories">
+    <button>Tous</button>
+
+    <?php
+      $args = [
+        'taxonomy' => 'category',
+        'parent' => 18,
+        'hide_empty' => false
+      ];
+
+      $categories = get_categories($args);
+
+      foreach ($categories as $category) {
+        $category = $category->name;
+
+        echo '<button>' . $category . '</button>';
+      }
+    ?>
+  </section>
 
   <div class="container">
     <?php  

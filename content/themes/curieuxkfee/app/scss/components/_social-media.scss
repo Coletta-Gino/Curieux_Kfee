@@ -16,9 +16,9 @@ footer {
       margin-left: 1em;
       text-decoration: none;
       color: $cream-coffee;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      border-right: 1px solid rgba(255, 255, 255, 0.2);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border: $border;
+      border-right: $border-right-bottom;
+      border-bottom: $border-right-bottom;
       border-radius: 50%;
       // box-shadow: 0 5px 45px rgb(0 0 0 / 10%);
       backdrop-filter: blur(2px);

@@ -1,7 +1,7 @@
-  <!-- Opening Hours -->
-  <h2 class="cmon">Venez<span>Nous sommes ouverts !</span></h2>
-    
+  <!-- Opening Hours -->  
   <ul class="opening-hours">
+    <h2 class="cmon">Venez<span>Nous sommes ouverts !</span></h2>
+    
     <?php  
       $args = [
         'post_type' => 'post',

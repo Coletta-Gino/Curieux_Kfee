@@ -9,6 +9,21 @@
         if ($taxonomies) :
           foreach ($taxonomies as $category) : ?>
             <article class="product" data-att="<?php $category = get_the_category(); echo esc_attr($category[0]->slug); ?>">
+              <?php
+                $latest = get_field_object('new');
+
+                if ($latest) {
+                  $name = $latest['name'];
+                  $value = $latest['value'];
+
+                  $new = '<span class="' . $name . '">' . $value . '</span>';
+                } else {
+                  $new = '';
+                }
+
+                echo $new;
+              ?>
+              
               <div class="product__image">
                 <?php the_post_thumbnail(); ?>
               </div>

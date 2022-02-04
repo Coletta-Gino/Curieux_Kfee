@@ -5,13 +5,22 @@ $font-family-title: 'Raleway', sans-serif;
 $font-family-content: 'Merriweather', serif;
 
 // Colors
-$white: hsl(0, 0%, 100%); // ou rgb(255, 255, 255), ou #fff
 $black: hsl(0, 0%, 0%); // ou rgb(0, 0, 0), ou #000
-$cream: hsl(39, 59%, 88%); // ou rgb(243, 231, 208), ou #f3e7d0
-$caramel-coffee: hsl(40, 70%, 67%); // ou rgb(230, 191, 113), ou #e6bf71
 $grey: hsl(340, 2%, 37%); // ou rgb(95, 92, 93), ou #5f5c5d
 $cappuccino: hsl(33, 33%, 61%); // ou rgb(188, 159, 123), ou #bc9f7b
+$caramel-coffee: hsl(40, 70%, 67%); // ou rgb(230, 191, 113), ou #e6bf71
+$cream: hsl(39, 59%, 88%); // ou rgb(243, 231, 208), ou #f3e7d0
 $cream-coffee: hsl(33, 59%, 83%); // ou rgb(237, 214, 185), ou #edd6b9
+$white: hsl(0, 0%, 100%); // ou rgb(255, 255, 255), ou #fff
+
+// Links Borders
+$border: 1px solid rgba($white, 0.4);
+$border-right-bottom: 1px solid rgba($white, 0.2);
+
+// Glass Effect
+$glass: rgba($white, 0.05);
+
+
 
 // $bg: linear-gradient(135deg, $black 0%, #0A0A0A 50%, #141414 100%);
 // $alpha-glass: 0.05;

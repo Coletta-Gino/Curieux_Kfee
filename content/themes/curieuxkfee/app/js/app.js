@@ -1,5 +1,5 @@
 var app = {
-    init: function() {
+    init: function () {
         console.log('init');
 
         /////////////// Play/Pause Button ///////////////
@@ -35,6 +35,17 @@ var app = {
 
         eventInfinite();
 
+        /////////////// Responsive Banner ///////////////
+        var eventDiv = document.querySelector('header .special-event');
+        var banner = document.querySelector('header .banner');
+
+        if (eventDiv.classList.contains('finished')) {
+            banner.classList.add('resized');
+        }
+        else {
+            banner.classList.remove('resized');
+        }
+
         /////////////// Sticky Nav ///////////////
         window.addEventListener('scroll', () => {
             var navigation = document.querySelector("nav");
@@ -49,28 +60,28 @@ var app = {
             var bar3 = document.querySelector('.burger .bar3');
             var nav = document.querySelector('.nav-links');
             var navLinks = document.querySelectorAll('.nav-links li');
-        
+
             burger.addEventListener('click', () => {
                 // Toggle Nav
                 nav.classList.toggle('nav-active');
-        
+
                 // Turn Bars Into Cross
                 if (nav.classList.contains('nav-active')) {
                     bar1.style.transform = 'rotate(-45deg) translate(-9px, 6px)';
                     bar2.style.opacity = '0';
                     bar3.style.transform = 'rotate(45deg) translate(-8px, -8px)';
-                } 
+                }
                 else {
                     bar1.style.transform = '';
                     bar2.style.opacity = '';
                     bar3.style.transform = '';
                 }
-    
+
                 // Animated Links
                 navLinks.forEach((link, index) => {
                     if (link.style.animation) {
                         link.style.animation = '';
-                    } 
+                    }
                     else {
                         // To slow down/accelerate the delay of the animated links, change the value after the index; shorter = slower
                         link.style.animation = `navLinkFade 0.5s ease forwards ${index / 2.5}s`;
@@ -78,7 +89,7 @@ var app = {
                 });
             });
         }
-  
+
         navSlide();
 
         /////////////// Categories ///////////////
@@ -86,8 +97,8 @@ var app = {
         const product = document.querySelectorAll('.product');
 
         btn.forEach(item => {
-            item.addEventListener('click', function() {
-                for(let i = 0; i < btn.length; i++) {
+            item.addEventListener('click', function () {
+                for (let i = 0; i < btn.length; i++) {
                     btn[i].classList.remove('active');
                 }
 
@@ -99,7 +110,7 @@ var app = {
 
                     let products = item.textContent.toLowerCase();
 
-                    if(show.getAttribute('data-att') === products || products === 'tous') {
+                    if (show.getAttribute('data-att') === products || products === 'tous') {
                         show.style.display = '';
                     }
                 })

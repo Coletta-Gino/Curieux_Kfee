@@ -8,10 +8,24 @@ main {
 
     a {
       text-decoration: none;
-      color: $grey;
+      color: $cream;
+      background: linear-gradient(to top, $caramel-coffee 0%, $caramel-coffee 10%, transparent 10.01%) no-repeat;
+      background-size: 0 100%;
+      padding-bottom: 0.35em;
+      transition: background-size 0.7s;
 
       i {
-        margin: 0 10px;
+        margin-right: 10px;
+      }
+
+      &:hover {
+        background-size: 100% 100%;
+      }
+
+      &:last-child {
+        i {
+          margin: 0 0 0 10px;
+        }
       }
     }
   }
@@ -23,7 +37,13 @@ main {
     .contact-us {
       a {
         i {
-          margin: 0 12.5px;
+          margin-right: 12.5px;
+        }
+  
+        &:last-child {
+          i {
+            margin: 0 0 0 12.5px;
+          }
         }
       }
     }
@@ -39,7 +59,13 @@ main {
       
       a {
         i {
-          margin: 0 15px;
+          margin-right: 15px;
+        }
+  
+        &:last-child {
+          i {
+            margin: 0 0 0 15px;
+          }
         }
       }
     }

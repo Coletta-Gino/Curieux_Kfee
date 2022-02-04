@@ -8,6 +8,7 @@ footer {
 
     p {
       color: $cream-coffee;
+      font-size: 0.75em;
 
       a {
         text-decoration: none;
@@ -20,7 +21,7 @@ footer {
 @media screen and (min-width: $breakpoint-small) {
   footer {
     .copyright {
-      margin-top: 1.5em;
+      margin-top: 1em;
     }
   }
 }
@@ -29,7 +30,7 @@ footer {
 @media screen and (min-width: $breakpoint-medium) {
   footer {
     .copyright {
-      margin-top: 2.25em;
+      margin-top: 0.25em;
     }
   }
 }

@@ -1,18 +1,31 @@
 ////////// Categories //////////
 main {
   .categories {
+    position: relative;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: left;
     align-items: center;
     margin-bottom: 1.85em;
 
     button {
-      margin-right: 10px;
+      color: $cream;
+      background-color: $grey;
+      margin: 0 10px 15px 0;
       padding: 0.5em 1em;
-      border: solid 1px $cappuccino;
-      border-radius: 10px;
+      border-radius: 50px;
+      border: none;
+      transition: 0.5s;
+      font-weight: 500;
+      text-transform: uppercase;
       outline: none;
       cursor: pointer;
+
+      &:hover {
+        // border: 2.5px solid $caramel-coffee;
+        transform: translateY(-10px);
+      }
     }
   }
 }
@@ -26,7 +39,10 @@ main {
       button {
         margin-right: 12.5px;
         padding: 0.75em 1.5em;
-        border-radius: 10px;
+
+        &:hover {
+          transform: translateY(-15px);
+        }
       }
     }
   }
@@ -41,6 +57,10 @@ main {
       button {
         margin-right: 15px;
         padding: 1em 2em;
+
+        &:hover {
+          transform: translateY(-20px);
+        }
       }
     }
   }

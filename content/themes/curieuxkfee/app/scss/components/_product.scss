@@ -2,13 +2,39 @@
 main {
   .container {
     .product {
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       margin-bottom: 1.85em;
-      padding: 1em;
+      padding: 1.5em 1em 1em;
       border: solid 1px $cappuccino;
+      background: $glass;
+      // box-shadow: 1.5px 2.5px 2.5px 5.5px rgb(0 0 0 / 50%);  
+      backdrop-filter: blur(2px);
+      border-radius: 10px;
+      transition: 0.5s;
+      overflow: hidden;
+      cursor: pointer;
+
+      .new {
+        position: absolute;
+        top: -16px;
+        right: -53px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $cream;
+        background-color: hsl(0, 100%, 40%);
+        font-weight: bold;
+        padding: 6px 17px 5px 19px;
+        transform-origin: top left;
+        transform: rotate(45deg);
+        text-transform: uppercase;
+        font-size: 0.65em;
+        letter-spacing: 5px;
+      }
 
       ///// Image /////
       &__image {
@@ -21,18 +47,19 @@ main {
         img {
           width: 100%;
           height: 100%;
-          border: solid 1px $black;
         }
       }
 
       ///// Informations /////
       &__infos {
         h2 {
+          color: $cream-coffee;
           text-align: center;
           margin-bottom: 1.25em;
         }
     
         p {
+          color: $cappuccino;
           text-align: justify;
           margin-bottom: 2.15em;
         }
@@ -48,11 +75,11 @@ main {
             a {
               text-decoration: none;
               margin-right: 15px;
-              color: $cappuccino;
+              color: $grey;
     
               &::before {
                 content: '#';
-                margin-right: 2.5px;
+                margin-right: 0.5px;
               }
             }
           }
@@ -68,45 +95,49 @@ main {
     .container {
       .product {
         display: flex;
-        flex-direction: row !important;
-        justify-content: space-between !important;
-        margin-bottom: 2.35em !important;
-        padding: 1.5em !important;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 2.35em;
+        padding: 2em;
 
         ///// Image /////
         &__image {
-          width: 45% !important;
-          height: 275px !important;
-          margin-bottom: 0 !important;
+          width: 45%;
+          height: 275px;
+          margin-bottom: 0;
         }
 
         ///// Informations /////
         &__infos {
-          width: 50% !important;
+          width: 50%;
 
           h2 {
-            margin-bottom: 1.75em !important;
+            margin-bottom: 1.75em;
           }
       
           p {
-            margin-bottom: 2.65em !important;
+            margin-bottom: 2.65em;
           }
       
           .tags {
             li {
               a {
-                margin-right: 20px !important;
-      
-                &::before {
-                  margin-right: 3px !important;
-                }
+                margin-right: 20px;
               }
             }
           }
         }
 
         &:nth-child(even) {
-          flex-direction: row-reverse !important;
+          flex-direction: row-reverse;
+
+          .new {
+            position: absolute;
+            right: inherit;
+            left: -53px;
+            transform-origin: top right;
+            transform: rotate(-45deg);
+          }
         }
       }
     }
@@ -125,45 +156,59 @@ main {
 
       .product {
         width: 48.5%;
-        margin-bottom: 2.85em !important;
-        padding: 2em !important;
+        margin-bottom: 2.85em;
 
         ///// Image /////
         &__image {
-          width: 45% !important;
-          height: 250px !important;
+          width: 45%;
+          height: 250px;
         }
 
         ///// Informations /////
         &__infos {
           h2 {
-            margin-bottom: 2.25em !important;
+            margin-bottom: 2.25em;
           }
       
           p {
-            margin-bottom: 3.15em !important;
+            margin-bottom: 3.15em;
           }
       
           .tags {
             li {
               a {
-                margin-right: 25px !important;
-      
-                &::before {
-                  margin-right: 3.5px !important;
-                }
+                margin-right: 25px;
               }
             }
           }
         }
 
         &:nth-child(even) {
-          flex-direction: inherit !important;
+          flex-direction: inherit;
+
+          .new {
+            right: -53px;
+            left: inherit;
+            transform-origin: top left;
+            transform: rotate(45deg);
+          }
         }
 
         &:nth-child(4n-1),
         &:nth-child(4n-2) { 
-          flex-direction: row-reverse !important;
+          flex-direction: row-reverse;
+
+          .new {
+            position: absolute;
+            right: inherit;
+            left: -53px;
+            transform-origin: top right;
+            transform: rotate(-45deg);
+          }
+        }
+
+        &:hover {
+          transform: translateY(-20px);
         }
       }
     }

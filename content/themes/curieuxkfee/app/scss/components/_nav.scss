@@ -29,7 +29,7 @@ header {
       right: 0;
       width: 100%;
       height: 92vh;
-      background-color: $grey;
+      background-image: url('http://localhost/Dev/Projet-Curieux_kF%c3%a9e/content/uploads/2022/02/Background-Simplifie-300x191.png');
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -51,11 +51,11 @@ header {
         }
 
         a {
-          color: $cappuccino;
           text-decoration: none;
           font-size: 14px;
           font-weight: bold;
           letter-spacing: 3px;
+          color: $cream;
           background: linear-gradient(to top, $caramel-coffee 0%, $caramel-coffee 10%, transparent 10.01%) no-repeat;
           background-size: 0 100%;
           padding-bottom: 0.35em;
@@ -90,7 +90,7 @@ header {
     &.sticky {
       top: 0;
       justify-content: space-between;
-      background-color: $grey;
+      background-image: url('http://localhost/Dev/Projet-Curieux_kF%c3%a9e/content/uploads/2022/02/Background-Simplifie-300x191.png');
       padding: 0 15px;
 
       .logo {

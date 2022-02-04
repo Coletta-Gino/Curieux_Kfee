@@ -1,27 +1,33 @@
 ////////// Opening Hours //////////
 main {
-  .cmon {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    span {
-      width: 100%;
-      text-align: center;
-      letter-spacing: 2.5px;
-      margin-bottom: 0.25em;
-    }
-  }
-
   .opening-hours {
-    width: 80%;
+    width: 87.5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0;
+    padding: 1em 1.25em 0;
     margin: 0 auto 2em;
+    color: $cappuccino;
+    background: $glass; 
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    border: solid 1px $cappuccino;
     list-style: none;
+
+    .cmon {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      color: $cream-coffee;
+      margin-bottom: 1.25em;
+  
+      span {
+        width: 100%;
+        text-align: center;
+        letter-spacing: 2.5px;
+      }
+    }
 
     li {
       display: flex;
@@ -29,16 +35,16 @@ main {
       align-items: center;
       padding-bottom: 1em;
       margin-bottom: 1em;
-      border-bottom: solid 1px $cappuccino;
+      border-bottom: solid 1px $cream-coffee;
 
       &:first-child {
         padding-top: 1em;
-        margin-top: 1em;
-        border-top: solid 1px $cappuccino;
+        margin-top: 0;
       }
 
       &:last-child {
         margin-bottom: 0;
+        border-bottom: none;
       }
     }
   }
@@ -47,16 +53,18 @@ main {
 // Tablet
 @media screen and (min-width: $breakpoint-small) {
   main {
-    .cmon {
-      span {
-        letter-spacing: 3px;
-        margin-bottom: 0.75em;
-      }
-    }
-      
     .opening-hours {
       width: 70%;
+      padding: 1.5em 1.75em 0;
       margin: 0 auto 2.5em;
+
+      .cmon {
+        margin-bottom: 1.75em;
+
+        span {
+          letter-spacing: 3px;
+        }
+      }
       
       li {
         padding-bottom: 1.5em;
@@ -73,17 +81,19 @@ main {
 
 // Desktop
 @media screen and (min-width: $breakpoint-medium) {
-  main {
-    .cmon {
-      span {
-        letter-spacing: 3.5px;
-        margin-bottom: 1.25em;
-      }
-    }
-          
+  main {  
     .opening-hours {
       width: 60%;
+      padding: 2em 2.25em 0;
       margin: 0 auto 3em;
+
+      .cmon {
+        margin-bottom: 2.25em;
+
+        span {
+          letter-spacing: 3.5px;
+        }
+      }
           
       li {
         padding-bottom: 2em;

@@ -2,12 +2,22 @@
 main {
   .wrapper {
     .content {
+      position: relative;
       display: flex;
       flex-wrap: wrap;
       justify-content: left;
+      background: $glass;
+      // box-shadow: 1.5px 2.5px 2.5px 5.5px rgb(0 0 0 / 50%);  
+      backdrop-filter: blur(2px);
+      border-radius: 10px;
+      border: solid 1px $cappuccino;
+      padding: 1em 1.5em 2.25em;
       margin-bottom: 2.5em;
+      transition: 0.5s;
+      cursor: pointer;
 
       h2 {
+        color: $cream-coffee;
         width: 100%;
         margin-bottom: 0.85em;
       }
@@ -17,7 +27,6 @@ main {
         width: 100%;
         height: 150px;
         display: flex;
-        border: solid 1px $black;
 
         img {
           width: 100%;
@@ -32,16 +41,24 @@ main {
 
         p {
           width: 100%;
+          color: $cappuccino;
           text-align: left;
           margin-bottom: 2.15em;
         }
     
         a {
           text-decoration: none;
-          color: $cappuccino;
+          color: $cream;
           background-color: $grey;
-          padding: 0.75em 1.5em;
+          padding: 0.75em 1.25em;
           border-radius: 5px;
+          transition: border 0.2s, padding 0.5s;
+
+          &:hover {
+            border: 2.5px solid $caramel-coffee;
+            padding-right: 2.5em;
+            padding-left: 2.5em;
+          }
         }
       }
 
@@ -62,14 +79,15 @@ main {
   main {
     .wrapper {
       .content {
-        width: 80%;
+        width: 90%;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        padding: 1.5em 2em 2em;
         margin: 0 auto 3em;
 
         h2 {
-          margin-bottom: 1.35em;
+          margin-bottom: 1em;
         }
 
         ///// Picture /////
@@ -81,7 +99,7 @@ main {
         ///// Description /////
         &__desc {
           width: 40%;
-          margin: 2em auto;
+          margin: 1em auto;
 
           p {
             text-align: left;
@@ -89,7 +107,7 @@ main {
           }
       
           a {
-            padding: 1em 2em;
+            padding: 1em 1.5em;
           }
         }
 
@@ -107,36 +125,45 @@ main {
     .wrapper {
       width: 100%;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
 
       .content {
-        width: 50%;
-        margin: 0 auto 3.5em;
+        width: 48.5%;
+        padding: 2em 0 2em 2em;
+        margin: 0 0 3.5em;
 
         h2 {
-          margin-bottom: 1.85em;
+          margin-bottom: 1.15em;
         }
 
         ///// Picture /////
         &__picture {
-          width: 50%;
-          height: 350px;
+          width: 45%;
+          height: 250px;
         }
 
         ///// Description /////
         &__desc {
-          margin: 2.5em auto;
+          width: 49.5%;
+          margin: 1em 1em 0;
 
           p {
             margin-bottom: 3.15em;
           }
       
           a {
-            padding: 1.25em 2.5em;
+            padding: 1.25em 1.75em;
           }
         }
 
         &:nth-child(even) {
-          border-left: dotted 2.5px $cappuccino;
+          justify-content: inherit;
+          padding: 2em 2em 2em 0;
+        }
+  
+        &:hover {
+          transform: translateY(-20px);
         }
       }
     }

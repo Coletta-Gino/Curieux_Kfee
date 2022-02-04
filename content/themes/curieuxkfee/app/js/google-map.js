@@ -63,7 +63,7 @@
             position : latLng,
             map: map,
             title: 'Curieux KFée',
-            // icon: 'content/themes/curieuxkfee/app/images/logo.png'
+            // icon: 'http://localhost/Dev/Projet-Curieux_kF%c3%a9e/content/uploads/2022/01/cropped-Logo-Simplifie-Sombre-32x32.png'
         });
     
         // Append to reference for later use.

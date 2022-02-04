@@ -3,8 +3,7 @@ header {
   .banner {
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    max-height: 100vh;
+    min-height: calc(100vh - 50px);
     display: flex;
     justify-content: center;
     background-size: cover;
@@ -20,8 +19,9 @@ header {
     p {
       position: absolute;
       width: 80%;
-      top: 15.5em;
-      color: $cream-coffee;
+      top: 200px;
+      color: $cream;
+      text-shadow: 1px 1px 2px $grey;
       text-align: center;
       z-index: 10;
     }
@@ -29,10 +29,10 @@ header {
     ///// Search Engine /////
     .searchform {
       position: absolute;
-      top: 24.5em;
-      padding: 0.5em 1em;
+      top: 350px;
+      padding: 0.5em 0.75em;
       background-color: rgba($black, 0.9);
-      border: solid 1px $cream-coffee;
+      border: solid 1px $cappuccino;
       border-radius: 25px;
 
       div {
@@ -40,14 +40,14 @@ header {
         justify-content: space-between;
 
         input {
-          color: $cream-coffee;
+          color: $cappuccino;
           background-color: transparent;
           outline: none;
           border: none;
         }
   
         button {
-          color: $cream-coffee;
+          color: $cappuccino;
           background-color: transparent;
           border: none;
           cursor: pointer;
@@ -58,8 +58,8 @@ header {
     ///// Anchor To Down /////
     #anchor {
       position: absolute;
-      bottom: 1.5em;
-      right: 1.5em;
+      bottom: 15px;
+      right: 15px;
 
       a {
         display: flex;
@@ -69,9 +69,9 @@ header {
         height: 40px;
         text-decoration: none;
         color: $cream-coffee;
-        border: 1px solid rgba(255, 255, 255, 0.4);
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border: $border;
+        border-right: $border-right-bottom;
+        border-bottom: $border-right-bottom;
         border-radius: 50%;
         backdrop-filter: blur(2px);
         transition: 0.5s;
@@ -98,6 +98,21 @@ header {
         }
       }
     }
+
+    // When there is an active event, we resize the banner
+    &.resized {
+      min-height: 100vh;
+
+      ///// Text /////
+      p {
+        top: 250px;
+      }
+
+      ///// Search Engine /////
+      .searchform {
+        top: 400px;
+      }
+    }
   }
 }
 
@@ -105,17 +120,19 @@ header {
 @media screen and (min-width: $breakpoint-small) {
   header {
     .banner {
+      max-height: calc(100vh - 50px);
+
       ///// Text /////
       p {
         width: 70%;
-        top: 17em;
+        top: 225px;
       }
 
       ///// Search Engine /////
       .searchform {
-        top: 24.75em;
         width: 30%;
-        padding: 0.75em 1.5em;
+        top: 350px;
+        padding: 0.75em 1em;
 
         div {
           input {
@@ -139,6 +156,19 @@ header {
           }
         }
       }
+
+      // When there is an active event, we resize the banner
+      &.resized {
+        ///// Text /////
+        p {
+          top: 275px;
+        }
+
+        ///// Search Engine /////
+        .searchform {
+          top: 415px;
+        }
+      }
     }
   }
 }
@@ -149,14 +179,14 @@ header {
     .banner {
       ///// Text /////
       p {
-        top: 22em;
+        top: 300px;
       }
 
       ///// Search Engine /////
       .searchform {
-        top: 30.25em;
         width: 25%;
-        padding: 1em 2em;
+        top: 440px;
+        padding: 1em 1.25em;
 
         div {
           input {
@@ -178,6 +208,19 @@ header {
           &:hover {
             transform: translateY(-20px);
           }
+        }
+      }
+
+      // When there is an active event, we resize the banner
+      &.resized {
+        ///// Text /////
+        p {
+          top: 350px;
+        }
+
+        ///// Search Engine /////
+        .searchform {
+          top: 490px;
         }
       }
     }
