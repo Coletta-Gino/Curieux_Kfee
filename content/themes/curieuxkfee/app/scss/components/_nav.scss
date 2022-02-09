@@ -1,9 +1,8 @@
 ////////// Navbar //////////
 header {
   nav {
+    background-color: transparent;
     position: fixed;
-    top: 50px;
-    left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -102,6 +101,17 @@ header {
         }
       }
 
+      ///// Menu Items /////
+      .nav-links {
+        li {
+          &.current {
+            a {
+              background-size: 100% 100%;
+            }
+          }
+        }
+      }
+
       ///// Menu Burger /////
       .burger {
         display: block;
@@ -114,9 +124,6 @@ header {
 @media screen and (min-width: $breakpoint-small) {
   header {
     nav {
-      top: 75px;
-      padding: 0;
-
       .logo {
         a {
           img {
@@ -182,8 +189,6 @@ header {
 @media screen and (min-width: $breakpoint-medium) {
   header {
     nav {
-      top: 100px;
-
       .logo {
         a {
           img {

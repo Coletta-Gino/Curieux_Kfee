@@ -41,7 +41,7 @@
     </div>
 
     <!-- Anchor -->
-    <div id="up" title="Vers le haut">
+    <div id="down" title="Vers le haut">
       <a href="#top">
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
       </a>

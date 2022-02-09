@@ -22,8 +22,9 @@ main {
       outline: none;
       cursor: pointer;
 
-      &:hover {
-        // border: 2.5px solid $caramel-coffee;
+      &:hover,
+      &.selected {
+        border: 2.5px solid $caramel-coffee;
         transform: translateY(-10px);
       }
     }

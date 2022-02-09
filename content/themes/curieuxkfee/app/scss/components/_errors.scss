@@ -1,0 +1,87 @@
+////////// Errors //////////
+main {
+  .errors {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $glass;
+    backdrop-filter: blur(2px);
+    padding: 1.5em 1em 1em;
+    border: solid 1px $cappuccino;
+    border-radius: 10px;
+    color: $cream-coffee;
+
+    h3 {
+      margin-bottom: 1.25em;
+    }
+
+    h2 {
+      font-style: italic;
+      font-size: 5em;
+      margin-bottom: 0.5em;
+      text-align: center;
+      color: $cappuccino;
+    }
+  
+    p {
+      text-align: center;
+      margin-bottom: 3.5em;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 0.85em;
+      color: $cream;
+      background: linear-gradient(to top, $caramel-coffee 0%, $caramel-coffee 10%, transparent 10.01%) no-repeat;
+      background-size: 0 100%;
+      padding-bottom: 0.35em;
+      transition: background-size 0.7s;
+
+      &:hover {
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: $breakpoint-small) {
+  main {
+    .errors {
+      width: 50%;
+      margin: 0 auto;
+      padding: 2em;
+
+      h3 {
+        margin-bottom: 1.75em;
+      }
+
+      h2 {
+        margin-bottom: 0.75em;
+      }
+    
+      p {
+        margin-bottom: 4em;
+      }
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: $breakpoint-medium) {
+  main {
+    .errors {
+      width: 40%;
+  
+      h2 {
+        margin-bottom: 0.65em;
+      }
+      
+      p {
+        margin-bottom: 4.5em;
+      }
+    }
+  }
+}

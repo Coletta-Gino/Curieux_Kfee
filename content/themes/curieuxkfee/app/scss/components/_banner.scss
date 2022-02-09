@@ -3,79 +3,71 @@ header {
   .banner {
     position: relative;
     width: 100%;
-    min-height: calc(100vh - 50px);
+    height: 300px;
     display: flex;
     justify-content: center;
-    background-size: cover;
-    background-position: right;
-    overflow-y: hidden;
 
     img {
       max-width: 100%;
       height: auto;
+      object-position: center;
+      object-fit: fill;
     }
 
     ///// Text /////
     p {
       position: absolute;
       width: 80%;
-      top: 200px;
+      top: 150px;
       color: $cream;
       text-shadow: 1px 1px 2px $grey;
       text-align: center;
       z-index: 10;
     }
 
-    ///// Search Engine /////
-    .searchform {
+    &__actions {
       position: absolute;
-      top: 350px;
-      padding: 0.5em 0.75em;
-      background-color: rgba($black, 0.9);
-      border: solid 1px $cappuccino;
-      border-radius: 25px;
+      width: 100%;
+      bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
 
-      div {
+      ///// Search Engine /////
+      .searchform {
         display: flex;
         justify-content: space-between;
-
-        input {
-          color: $cappuccino;
-          background-color: transparent;
-          outline: none;
-          border: none;
-        }
-  
-        button {
-          color: $cappuccino;
-          background-color: transparent;
-          border: none;
-          cursor: pointer;
-        }
-      }
-    }
-
-    ///// Anchor To Down /////
-    #anchor {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-
-      a {
-        display: flex;
-        justify-content: center;
         align-items: center;
-        width: 40px;
-        height: 40px;
-        text-decoration: none;
-        color: $cream-coffee;
         border: $border;
         border-right: $border-right-bottom;
         border-bottom: $border-right-bottom;
-        border-radius: 50%;
         backdrop-filter: blur(2px);
-        transition: 0.5s;
+        border-radius: 25px;
         overflow: hidden;
+
+        input {
+          width: 0px;
+          color: $cream-coffee;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          transition: 0.5s;
+        }
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          color: $cream-coffee;
+          background-color: transparent;
+          border: none;
+          border-radius: 50%;
+          transition: 0.5s;
+          cursor: pointer;
+        }
 
         &::before {
           content: '';
@@ -88,29 +80,57 @@ header {
           transform: skewX(45deg) translateX(150px);
           transition: 0.8s;
         }
-  
+
         &:hover {
-          transform: translateY(-10px);
+          input {
+            width: 150px;
+            padding-left: 1.25em;
+          }
 
           &::before {
             transform: skewX(45deg) translateX(-150px);
           }
         }
       }
-    }
 
-    // When there is an active event, we resize the banner
-    &.resized {
-      min-height: 100vh;
-
-      ///// Text /////
-      p {
-        top: 250px;
-      }
-
-      ///// Search Engine /////
-      .searchform {
-        top: 400px;
+      ///// Anchor To Down /////
+      #up {
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          text-decoration: none;
+          color: $cream-coffee;
+          border: $border;
+          border-right: $border-right-bottom;
+          border-bottom: $border-right-bottom;
+          border-radius: 50%;
+          backdrop-filter: blur(2px);
+          transition: 0.5s;
+          overflow: hidden;
+  
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: skewX(45deg) translateX(150px);
+            transition: 0.8s;
+          }
+    
+          &:hover {
+            transform: translateY(-10px);
+  
+            &::before {
+              transform: skewX(45deg) translateX(-150px);
+            }
+          }
+        }
       }
     }
   }
@@ -120,53 +140,48 @@ header {
 @media screen and (min-width: $breakpoint-small) {
   header {
     .banner {
-      max-height: calc(100vh - 50px);
+      height: 350px;
 
       ///// Text /////
       p {
         width: 70%;
-        top: 225px;
+        top: 200px;
       }
 
-      ///// Search Engine /////
-      .searchform {
-        width: 30%;
-        top: 350px;
-        padding: 0.75em 1em;
-
-        div {
-          input {
-            width: 90%;
-          }
-        }
-      }
-
-      ///// Anchor To Down /////
-      #anchor {
-        a {
-          width: 45px;
-          height: 45px;
-
-          i {
-            font-size: 1.25em;
-          }
-    
-          &:hover {
-            transform: translateY(-15px);
-          }
-        }
-      }
-
-      // When there is an active event, we resize the banner
-      &.resized {
-        ///// Text /////
-        p {
-          top: 275px;
-        }
-
+      &__actions {
         ///// Search Engine /////
         .searchform {
-          top: 415px;
+          button {
+            width: 45px;
+            height: 45px;
+
+            i {
+              font-size: 1.25em;
+            }
+          }
+  
+          &:hover {
+            input {
+              width: 200px;
+              padding-left: 1.5em;
+            }
+          }
+        }
+
+        ///// Anchor To Down /////
+        #up {
+          a {
+            width: 45px;
+            height: 45px;
+  
+            i {
+              font-size: 1.25em;
+            }
+      
+            &:hover {
+              transform: translateY(-15px);
+            }
+          }
         }
       }
     }
@@ -177,50 +192,47 @@ header {
 @media screen and (min-width: $breakpoint-medium) {
   header {
     .banner {
+      height: 400px;
+
       ///// Text /////
       p {
-        top: 300px;
+        top: 250px;
       }
 
-      ///// Search Engine /////
-      .searchform {
-        width: 25%;
-        top: 440px;
-        padding: 1em 1.25em;
-
-        div {
-          input {
-            width: 95%;
-          }
-        }
-      }
-
-      ///// Anchor To Down /////
-      #anchor {
-        a {
-          width: 50px;
-          height: 50px;
-
-          i {
-            font-size: 1.5em;
-          }
-    
-          &:hover {
-            transform: translateY(-20px);
-          }
-        }
-      }
-
-      // When there is an active event, we resize the banner
-      &.resized {
-        ///// Text /////
-        p {
-          top: 350px;
-        }
-
+      &__actions {
         ///// Search Engine /////
         .searchform {
-          top: 490px;
+          button {
+            width: 50px;
+            height: 50px;
+
+            i {
+              font-size: 1.5em;
+            }
+          }
+  
+          &:hover {
+            input {
+              width: 250px;
+              padding-left: 1.75em;
+            }
+          }
+        }
+
+        ///// Anchor To Down /////
+        #up {
+          a {
+            width: 50px;
+            height: 50px;
+  
+            i {
+              font-size: 1.5em;
+            }
+      
+            &:hover {
+              transform: translateY(-20px);
+            }
+          }
         }
       }
     }

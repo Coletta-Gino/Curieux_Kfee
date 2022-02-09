@@ -26,6 +26,14 @@ header {
 }
 
 main {
+  .errors {
+    font-family: $font-family-content;
+
+    h2 {
+      font-family: $font-family-title;
+    }
+  }
+
   section {
     h1 {
       font-family: $font-family-title;

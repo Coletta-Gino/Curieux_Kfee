@@ -4,3 +4,4 @@
   require('inc/google-map-api.php');
   require('inc/search_form.php');
   require('inc/search_filter.php');
+  require('inc/current-item-on-nav.php');

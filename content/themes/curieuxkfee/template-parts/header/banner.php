@@ -14,11 +14,13 @@
       <?php the_post_thumbnail(); ?>
     <?php endwhile; endif; ?>
 
-    <?php get_search_form(); ?>
+    <div class="banner__actions">
+      <?php get_search_form(); ?>
 
-    <div id="anchor" title="Vers le bas">
-      <a href="#anchor">
-        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-      </a>
+      <div id="up" title="Vers le bas">
+        <a href="#down">
+          <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
   </section>
