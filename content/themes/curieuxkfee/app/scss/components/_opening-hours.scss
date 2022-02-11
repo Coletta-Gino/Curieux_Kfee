@@ -7,7 +7,6 @@ main {
     justify-content: center;
     padding: 1em 1.25em 0;
     margin: 0 auto 2em;
-    color: $cappuccino;
     background: $glass; 
     backdrop-filter: blur(2px);
     border-radius: 10px;
@@ -20,7 +19,7 @@ main {
       flex-wrap: wrap;
       justify-content: center;
       color: $cream-coffee;
-      margin-bottom: 1.25em;
+      margin-bottom: 0.75em;
   
       span {
         width: 100%;
@@ -33,18 +32,20 @@ main {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 1em;
-      margin-bottom: 1em;
+      color: $cappuccino;
+      font-style: italic;
+      font-weight: bold;
+      padding: 1em 0;
       border-bottom: solid 1px $cream-coffee;
 
-      &:first-child {
-        padding-top: 1em;
-        margin-top: 0;
+      &:last-child {
+        border-bottom: none;
       }
 
-      &:last-child {
-        margin-bottom: 0;
-        border-bottom: none;
+      &.today {
+        color: $cream-coffee;
+        background: rgba(188, 159, 123, 0.75);
+        justify-content: space-around;
       }
     }
   }
@@ -59,7 +60,7 @@ main {
       margin: 0 auto 2.5em;
 
       .cmon {
-        margin-bottom: 1.75em;
+        margin-bottom: 1.25em;
 
         span {
           letter-spacing: 3px;
@@ -67,13 +68,7 @@ main {
       }
       
       li {
-        padding-bottom: 1.5em;
-        margin-bottom: 1.5em;
-
-        &:first-child {
-          padding-top: 1.5em;
-          margin-top: 1.5em;
-        }
+        padding: 1.5em 0;
       }
     }
   }
@@ -88,7 +83,7 @@ main {
       margin: 0 auto 3em;
 
       .cmon {
-        margin-bottom: 2.25em;
+        margin-bottom: 1.75em;
 
         span {
           letter-spacing: 3.5px;
@@ -96,13 +91,7 @@ main {
       }
           
       li {
-        padding-bottom: 2em;
-        margin-bottom: 2em;
-
-        &:first-child {
-          padding-top: 2em;
-          margin-top: 2em;
-        }
+        padding: 2em 0;
       }
     }
   }

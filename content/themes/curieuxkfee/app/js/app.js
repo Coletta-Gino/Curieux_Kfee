@@ -105,6 +105,9 @@ var app = {
                 });
             });
         });
+
+        /////////////// Highlight The Active Date ///////////////
+        document.querySelectorAll('.opening-hours li')[new Date().getDay()-1].classList.add('today');
     }
 };
 
