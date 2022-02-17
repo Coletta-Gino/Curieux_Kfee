@@ -12,6 +12,16 @@ footer {
 
       a {
         text-decoration: none;
+        color: $cappuccino;
+        background: linear-gradient(to top, $cream 0%, $cream 10%, transparent 10.01%) no-repeat;
+        font-weight: bold;
+        background-size: 0 100%;
+        padding-bottom: 0.35em;
+        transition: background-size 0.7s;
+
+        &:hover {
+          background-size: 100% 100%;
+        }
       }
     }
   }

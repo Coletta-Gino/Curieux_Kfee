@@ -5,7 +5,6 @@ header {
     position: fixed;
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     min-height: 8vh;
     padding: 25px 50px;
@@ -13,10 +12,17 @@ header {
     z-index: 99;
 
     .logo {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.7s;
+
       a {
         img {
           width: 100px;
           height: 100px;
+          transition: 0.7s;
         }
       }
     }
@@ -93,6 +99,9 @@ header {
       padding: 0 15px;
 
       .logo {
+        left: 0;
+        transform: translateX(0);
+
         a {
           img {
             width: 55px;
@@ -194,10 +203,13 @@ header {
   header {
     nav {
       .logo {
+        transition: 1s;
+
         a {
           img {
             width: 150px;
             height: 150px;
+            transition: 1s;
           }
         }
       }
