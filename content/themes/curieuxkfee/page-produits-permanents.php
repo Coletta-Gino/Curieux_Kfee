@@ -1,7 +1,7 @@
 <?php get_header(); ?>
   <!-- Categories -->
   <section class="categories">
-    <button>Tous</button>
+    <button class="selected">Tous</button>
 
     <?php
       $args = [

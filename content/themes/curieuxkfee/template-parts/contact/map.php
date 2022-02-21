@@ -12,7 +12,7 @@
     <div class="map">
       <?php 
         $location = get_field('map'); 
-        // var_dump($location);
+
         if($location):
           $zoom = esc_attr($location['zoom']);
           $lat = esc_attr($location['lat']);
@@ -20,8 +20,10 @@
           $name = esc_attr($location['name']);
           $post_code = esc_attr($location['post_code']);
           $city = esc_attr($location['city']);
+          // $state = esc_attr($location['state']);
           $country = esc_attr($location['country']);
           $address = $post_code . ', ' . $city . ', ' . $country;
+          // $address = $post_code . ', ' . $city . ', ' . $state . ', ' . $country;
       ?>
 
         <strong>

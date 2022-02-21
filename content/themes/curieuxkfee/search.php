@@ -23,14 +23,14 @@
   <h1><?php echo $result; ?></h1>
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <!-- 1) S'il y a au moins un résultat -->
+    <!-- If there is almost one result -->
     <article class="results__found">
       <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     </article>
 
     <?php endwhile; wp_reset_query(); ?>
   <?php else : ?>
-    <!-- 2) Si pas de résultat -->
+    <!-- If there is no result -->
     <p>Votre recherche est infructueuse. Veuillez essayer avec d&apos;autres termes de recherche.</p>
   <?php endif; ?>
 
