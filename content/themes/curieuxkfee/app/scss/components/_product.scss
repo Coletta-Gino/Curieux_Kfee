@@ -9,11 +9,7 @@ main {
       align-items: center;
       margin-bottom: 1.85em;
       padding: 1.5em 1em 1em;
-      border: solid 1px $cappuccino;
-      background: $glass;
-      // box-shadow: 1.5px 2.5px 2.5px 5.5px rgb(0 0 0 / 50%);  
-      backdrop-filter: blur(2px);
-      border-radius: 10px;
+      @include glassmorphism;
       transition: 0.5s;
       overflow: hidden;
       cursor: pointer;

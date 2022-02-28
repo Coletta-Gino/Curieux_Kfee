@@ -70,15 +70,7 @@ header {
         }
 
         &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 50px;
-          height: 100%;
-          background: rgba(255, 255, 255, 0.5);
-          transform: skewX(45deg) translateX(150px);
-          transition: 0.8s;
+          @include before-in-circles;
         }
 
         &:hover {
@@ -96,31 +88,10 @@ header {
       ///// Anchor To Down /////
       #up {
         a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 40px;
-          height: 40px;
-          text-decoration: none;
-          color: $cream-coffee;
-          border: $border;
-          border-right: $border-right-bottom;
-          border-bottom: $border-right-bottom;
-          border-radius: 50%;
-          backdrop-filter: blur(2px);
-          transition: 0.5s;
-          overflow: hidden;
+          @include item-in-a-circle;
   
           &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50px;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.5);
-            transform: skewX(45deg) translateX(150px);
-            transition: 0.8s;
+            @include before-in-circles;
           }
     
           &:hover {

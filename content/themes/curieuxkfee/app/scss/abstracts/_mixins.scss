@@ -1,0 +1,59 @@
+// Items In A Circle
+@mixin item-in-a-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  color: $cream-coffee;
+  border: $border;
+  border-right: $border-right-bottom;
+  border-bottom: $border-right-bottom;
+  border-radius: 50%;
+  // box-shadow: 0 5px 45px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(2px);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+// Glass Effect On Hover
+@mixin before-in-circles {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.8s;
+}
+
+// Underline Effect (Cream & Caramel Coffee)
+@mixin basic-underline {
+  text-decoration: none;
+  color: $cream;
+  background: linear-gradient(to top, $caramel-coffee 0%, $caramel-coffee 10%, transparent 10.01%) no-repeat;
+  background-size: 0 100%;
+  padding-bottom: 0.35em;
+  transition: background-size 0.7s;
+}
+
+// Reverse Underline Effect (Cappucino & Cream)
+@mixin reverse-underline {
+  text-decoration: none;
+  color: $cappuccino;
+  background-size: 0 100%;
+  padding-bottom: 0.35em;
+  transition: background-size 0.7s;
+}
+
+// Glassmorphism Elements
+@mixin glassmorphism {
+  background: $glass;
+  // box-shadow: 1.5px 2.5px 2.5px 5.5px rgb(0 0 0 / 50%);  
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: solid 1px $cappuccino;
+}
