@@ -8,7 +8,7 @@ header {
     align-items: center;
     min-height: 8vh;
     padding: 25px 50px;
-    transition: 0.5s;
+    transition: $transition-medium;
     z-index: 99;
 
     .logo {
@@ -16,13 +16,13 @@ header {
       top: 50%;
       left: 50%;
       transform: translateX(-50%);
-      transition: 0.7s;
+      transition: $transition-slow;
 
       a {
         img {
           width: 100px;
           height: 100px;
-          transition: 0.7s;
+          transition: $transition-slow;
         }
       }
     }
@@ -40,7 +40,7 @@ header {
       justify-content: center;
       align-items: center;
       transform: translateX(100%);
-      transition: transform 0.5s ease-in;
+      transition: transform $transition-medium ease-in;
 
       li {
         list-style: none;
@@ -62,7 +62,7 @@ header {
           @include basic-underline;
 
           &:hover {
-            background-size: 100% 100%;
+            background-size: $size-hover;
           }
         }
       }
@@ -110,7 +110,7 @@ header {
         li {
           &.current {
             a {
-              background-size: 100% 100%;
+              background-size: $size-hover;
 
               &:hover {
                 background-size: 0% 100%;

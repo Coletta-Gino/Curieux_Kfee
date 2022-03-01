@@ -19,7 +19,7 @@ footer {
       }
 
       &:hover {
-        transform: translateY(-10px);
+        transform: $translateY-mobile;
 
         .fa-envelope {
           color: $caramel-coffee;
@@ -52,7 +52,7 @@ footer {
         }
 
         &::before {
-          transform: skewX(45deg) translateX(-150px);
+          transform: $glass-hover;
         }
       }
     }
@@ -74,7 +74,7 @@ footer {
         }
 
         &:hover {
-          transform: translateY(-15px);
+          transform: $translateY-tablet;
   
           .fa-facebook-square {
             &::after {
@@ -101,7 +101,7 @@ footer {
         }
 
         &:hover {
-          transform: translateY(-20px);
+          transform: $translateY-desktop;
   
           .fa-facebook-square {
             &::after {

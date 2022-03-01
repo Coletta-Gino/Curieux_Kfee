@@ -10,7 +10,7 @@ main {
       margin-bottom: 1.85em;
       padding: 1.5em 1em 1em;
       @include glassmorphism;
-      transition: 0.5s;
+      transition: $transition-medium;
       overflow: hidden;
       cursor: pointer;
 
@@ -197,7 +197,7 @@ main {
         }
 
         &:hover {
-          transform: translateY(-20px);
+          transform: $translateY-desktop;
         }
       }
     }

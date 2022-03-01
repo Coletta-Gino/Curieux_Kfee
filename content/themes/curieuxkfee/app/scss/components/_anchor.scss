@@ -13,10 +13,10 @@ footer {
       }
 
       &:hover {
-        transform: translateY(-10px);
+        transform: $translateY-mobile;
 
         &::before {
-          transform: skewX(45deg) translateX(-150px);
+          transform: $glass-hover;
         }
       }
     }
@@ -38,7 +38,7 @@ footer {
         }
   
         &:hover {
-          transform: translateY(-15px);
+          transform: $translateY-tablet;
         }
       }
     }
@@ -58,7 +58,7 @@ footer {
         }
 
         &:hover {
-          transform: translateY(-20px);
+          transform: $translateY-desktop;
         }
       }
     }

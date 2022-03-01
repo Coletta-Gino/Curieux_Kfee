@@ -13,7 +13,7 @@
   border-radius: 50%;
   // box-shadow: 0 5px 45px rgb(0 0 0 / 10%);
   backdrop-filter: blur(2px);
-  transition: 0.5s;
+  transition: $transition-medium;
   overflow: hidden;
 }
 
@@ -37,7 +37,7 @@
   background: linear-gradient(to top, $caramel-coffee 0%, $caramel-coffee 10%, transparent 10.01%) no-repeat;
   background-size: 0 100%;
   padding-bottom: 0.35em;
-  transition: background-size 0.7s;
+  transition: background-size $transition-slow;
 }
 
 // Reverse Underline Effect (Cappucino & Cream)
@@ -46,7 +46,7 @@
   color: $cappuccino;
   background-size: 0 100%;
   padding-bottom: 0.35em;
-  transition: background-size 0.7s;
+  transition: background-size $transition-slow;
 }
 
 // Glassmorphism Elements

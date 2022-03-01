@@ -9,7 +9,7 @@ main {
       @include glassmorphism;
       padding: 1em 1.5em 2.25em;
       margin-bottom: 2.5em;
-      transition: 0.5s;
+      transition: $transition-medium;
       cursor: pointer;
 
       h2 {
@@ -48,7 +48,7 @@ main {
           background-color: $grey;
           padding: 0.75em 1.25em;
           border-radius: 5px;
-          transition: border 0.2s, padding 0.5s;
+          transition: border 0.2s, padding $transition-medium;
 
           &:hover {
             border: 2.5px solid $caramel-coffee;
@@ -159,7 +159,7 @@ main {
         }
   
         &:hover {
-          transform: translateY(-20px);
+          transform: $translateY-desktop;
         }
       }
     }

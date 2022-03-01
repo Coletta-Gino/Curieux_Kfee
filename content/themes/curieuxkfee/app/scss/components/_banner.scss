@@ -52,7 +52,7 @@ header {
           background-color: transparent;
           border: none;
           outline: none;
-          transition: 0.5s;
+          transition: $transition-medium;
         }
 
         button {
@@ -65,7 +65,7 @@ header {
           background-color: transparent;
           border: none;
           border-radius: 50%;
-          transition: 0.5s;
+          transition: $transition-medium;
           cursor: pointer;
         }
 
@@ -80,7 +80,7 @@ header {
           }
 
           &::before {
-            transform: skewX(45deg) translateX(-150px);
+            transform: $glass-hover;
           }
         }
       }
@@ -95,10 +95,10 @@ header {
           }
     
           &:hover {
-            transform: translateY(-10px);
+            transform: $translateY-mobile;
   
             &::before {
-              transform: skewX(45deg) translateX(-150px);
+              transform: $glass-hover;
             }
           }
         }
@@ -150,7 +150,7 @@ header {
             }
       
             &:hover {
-              transform: translateY(-15px);
+              transform: $translateY-tablet;
             }
           }
         }
@@ -201,7 +201,7 @@ header {
             }
       
             &:hover {
-              transform: translateY(-20px);
+              transform: $translateY-desktop;
             }
           }
         }

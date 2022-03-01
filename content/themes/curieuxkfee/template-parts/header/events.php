@@ -2,7 +2,8 @@
   <?php 
     if (get_field('status', 23)) {
       $value = '';
-    } else {
+    } 
+    else {
       $value = ' finished';
     }
   ?>

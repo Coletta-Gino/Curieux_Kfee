@@ -30,7 +30,7 @@ main {
           @include reverse-underline;
 
           &:hover {
-            background-size: 100% 100%;
+            background-size: $size-hover;
           }
         }
       }
@@ -48,7 +48,7 @@ main {
       @include basic-underline;
 
       &:hover {
-        background-size: 100% 100%;
+        background-size: $size-hover;
       }
     }
   }

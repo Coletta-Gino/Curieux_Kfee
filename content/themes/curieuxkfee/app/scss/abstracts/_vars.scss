@@ -1,41 +1,41 @@
-// Variables (fonts, colors, sizes, breakpoints)
+// Variables (fonts, colors, sizes, breakpoints, ...)
 // Fonts + Font Awesome 4.7.0 Icons
 $fa-font-path: '~font-awesome/fonts';
 $font-family-title: 'Raleway', sans-serif;
 $font-family-content: 'Merriweather', serif;
 
 // Colors
-$black: hsl(0, 0%, 0%); // ou rgb(0, 0, 0), ou #000
-$grey: hsl(340, 2%, 37%); // ou rgb(95, 92, 93), ou #5f5c5d
-$cappuccino: hsl(33, 33%, 61%); // ou rgb(188, 159, 123), ou #bc9f7b
-$caramel-coffee: hsl(40, 70%, 67%); // ou rgb(230, 191, 113), ou #e6bf71
-$cream: hsl(39, 59%, 88%); // ou rgb(243, 231, 208), ou #f3e7d0
-$cream-coffee: hsl(33, 59%, 83%); // ou rgb(237, 214, 185), ou #edd6b9
-$white: hsl(0, 0%, 100%); // ou rgb(255, 255, 255), ou #fff
+$black: hsl(0, 0%, 0%); // or rgb(0, 0, 0), or #000
+$grey: hsl(340, 2%, 37%); // or rgb(95, 92, 93), or #5f5c5d
+$cappuccino: hsl(33, 33%, 61%); // or rgb(188, 159, 123), or #bc9f7b
+$caramel-coffee: hsl(40, 70%, 67%); // or rgb(230, 191, 113), or #e6bf71
+$cream: hsl(39, 59%, 88%); // or rgb(243, 231, 208), or #f3e7d0
+$cream-coffee: hsl(33, 59%, 83%); // or rgb(237, 214, 185), or #edd6b9
+$white: hsl(0, 0%, 100%); // or rgb(255, 255, 255), or #fff
+
+// Transitions Durations
+$transition-medium: 0.5s;
+$transition-slow: 0.7s;
 
 // Borders
 $border: 1px solid rgba($white, 0.4);
 $border-right-bottom: 1px solid rgba($white, 0.2);
 
-// Glass Effect
+// Glassmorphism Style
 $glass: rgba($white, 0.05);
 
-
-
-// $bg: linear-gradient(135deg, $black 0%, #0A0A0A 50%, #141414 100%);
-// $alpha-glass: 0.05;
-// $alpha-hover: 0.75;
-// $glass: rgba($white, $alpha-glass);
-// $hover-red: rgba($red, $alpha-hover);
-// $box-shadow-white: 1px 1px 1.5px 1.5px rgba($white, 0.5);
-// $border-radius-small: 10px;
-// $border-radius-medium: 15px;
+// Hover Effects
+$glass-hover: skewX(45deg) translateX(-150px);
+$size-hover: 100% 100%;
 
 // Mobile
+$translateY-mobile: translateY(-10px);
 
 // Tablet
+$translateY-tablet: translateY(-15px);
 
 // Desktop
+$translateY-desktop: translateY(-20px);
 
 // Breakpoints
 $breakpoint-small: 768px;

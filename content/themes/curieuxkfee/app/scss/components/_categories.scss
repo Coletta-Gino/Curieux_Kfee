@@ -16,7 +16,7 @@ main {
       padding: 0.5em 1em;
       border-radius: 50px;
       border: none;
-      transition: 0.5s;
+      transition: $transition-medium;
       font-weight: 500;
       text-transform: uppercase;
       outline: none;
@@ -25,7 +25,7 @@ main {
       &:hover,
       &.selected {
         border: 2.5px solid $caramel-coffee;
-        transform: translateY(-10px);
+        transform: $translateY-mobile;
       }
     }
   }
@@ -42,7 +42,7 @@ main {
         padding: 0.75em 1.5em;
 
         &:hover {
-          transform: translateY(-15px);
+          transform: $translateY-tablet;
         }
       }
     }
@@ -60,7 +60,7 @@ main {
         padding: 1em 2em;
 
         &:hover {
-          transform: translateY(-20px);
+          transform: $translateY-desktop;
         }
       }
     }
