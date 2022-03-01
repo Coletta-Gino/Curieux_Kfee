@@ -16,9 +16,12 @@
                   $name = $latest['name'];
                   $value = $latest['value'];
 
-                  $new = '<span class="' . $name . '">' . $value . '</span>';
-                } else {
-                  $new = '';
+                  if (!empty($value)) {
+                    $new = '<span class="' . $name . '">' . $value . '</span>';
+                  }
+                  else {
+                    $new = '';
+                  }
                 }
 
                 echo $new;
