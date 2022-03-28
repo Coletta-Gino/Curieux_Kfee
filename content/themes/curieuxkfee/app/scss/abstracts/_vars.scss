@@ -13,6 +13,10 @@ $cream: hsl(39, 59%, 88%); // or rgb(243, 231, 208), or #f3e7d0
 $cream-coffee: hsl(33, 59%, 83%); // or rgb(237, 214, 185), or #edd6b9
 $white: hsl(0, 0%, 100%); // or rgb(255, 255, 255), or #fff
 
+// Shadow
+$box-shadow-circle: inset -3px -3px 7px 2.5px rgba($cream-coffee, 0.1);
+$box-shadow-product: 1.5px 2.5px 2.5px 5.5px rgba($black, 0.15);
+
 // Transitions Durations
 $transition-medium: 0.5s;
 $transition-slow: 0.7s;

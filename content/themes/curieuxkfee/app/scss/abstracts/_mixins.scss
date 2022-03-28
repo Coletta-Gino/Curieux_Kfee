@@ -7,11 +7,11 @@
   height: 40px;
   text-decoration: none;
   color: $cream-coffee;
+  box-shadow: $box-shadow-circle;
   border: $border;
   border-right: $border-right-bottom;
   border-bottom: $border-right-bottom;
   border-radius: 50%;
-  // box-shadow: 0 5px 45px rgb(0 0 0 / 10%);
   backdrop-filter: blur(2px);
   transition: $transition-medium;
   overflow: hidden;
@@ -52,7 +52,7 @@
 // Glassmorphism Elements
 @mixin glassmorphism {
   background: $glass;
-  // box-shadow: 1.5px 2.5px 2.5px 5.5px rgb(0 0 0 / 50%);  
+  box-shadow: $box-shadow-product;
   backdrop-filter: blur(2px);
   border-radius: 10px;
   border: solid 1px $cappuccino;

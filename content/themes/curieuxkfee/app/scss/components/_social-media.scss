@@ -63,6 +63,8 @@ footer {
 @media screen and (min-width: $breakpoint-small) {
   footer {
     .social-media {
+      width: calc(100% / 3);
+      justify-content: end;
       margin-bottom: 0;
 
       a {

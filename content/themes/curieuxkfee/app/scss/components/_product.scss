@@ -7,7 +7,7 @@ main {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-bottom: 1.85em;
+      margin-bottom: 2.5em;
       padding: 1.5em 1em 1em;
       @include glassmorphism;
       transition: $transition-medium;
@@ -87,22 +87,23 @@ main {
   main {
     .container {
       .product {
+        width: 90%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 2.35em;
         padding: 2em;
+        margin: 0 auto 3em;
 
         ///// Image /////
         &__image {
-          width: 275px;
-          height: 275px;
+          width: 225px;
+          height: 225px;
           margin-bottom: 0;
         }
 
         ///// Informations /////
         &__infos {
-          width: 50%;
+          width: 56%;
 
           h2 {
             margin-bottom: 1.75em;
@@ -147,17 +148,17 @@ main {
 
       .product {
         width: 48.5%;
-        margin-bottom: 2.85em;
+        margin: 0 0 3.5em;
 
         ///// Image /////
         &__image {
-          width: 300px;
-          height: 300px;
+          width: 250px;
+          height: 250px;
         }
 
         ///// Informations /////
         &__infos {
-          width: 57.5%;
+          width: calc(100% - 280px);
 
           h2 {
             margin-bottom: 2.25em;
