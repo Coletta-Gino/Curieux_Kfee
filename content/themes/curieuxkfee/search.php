@@ -3,7 +3,7 @@
 <div class="results">
   <?php
     $count = $wp_query->found_posts;
-    if ($count <=1 ) {
+    if ($count <= 1 ) {
       $several = '';
     }
     else {
@@ -34,7 +34,7 @@
     <p>Votre recherche est infructueuse. Veuillez essayer avec d&apos;autres termes de recherche.</p>
   <?php endif; ?>
 
-  <a href="<?php echo home_url(); ?>">Retour</a>
+  <a href="<?= home_url(); ?>">Retour</a>
 </div>
 
 <?php get_footer(); ?>

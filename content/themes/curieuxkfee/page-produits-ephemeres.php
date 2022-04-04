@@ -4,6 +4,7 @@
     <button class="selected">Tous</button>
 
     <?php
+      // TODO => be carreful to change the value of 'parent' = the id of the ephemerals category !!!
       $args = [
         'taxonomy' => 'category',
         'parent' => 18,
