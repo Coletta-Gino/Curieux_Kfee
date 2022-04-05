@@ -1,6 +1,6 @@
       <!-- Product's Description -->
       <?php
-        // TODO => be carreful to change the value of 'parent' = the id of the permanents category !!!
+        // TODO => be careful to change the value of 'parent' = the id of the permanents category !!!
         $taxonomies = get_terms([
           'taxonomy' => 'category',
           'parent' => 19,

@@ -3,6 +3,7 @@
 // Search Filter
 function my_search_filter($query) {
   if (!is_admin()) {
+    // TODO => be carreful to change the values of the id of all categories !!!
     if ($query->is_search) {
       // $query->set('post_type', 'pages'); // to exclude pages
       $query->set('cat', array(-18, -19)); // to exclude children of 'ephemeral' and 'permanent' categories

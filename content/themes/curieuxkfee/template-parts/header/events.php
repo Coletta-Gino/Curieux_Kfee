@@ -1,6 +1,6 @@
   <!-- Events/Promotions -->
   <?php 
-    // TODO => be carreful to change the value of 23 = the id of the special event's article !!!
+    // TODO => be careful to change the value of 23 = the id of the special event's article !!!
     if (get_field('status', 23)) {
       $value = '';
     } 
