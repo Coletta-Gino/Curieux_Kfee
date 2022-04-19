@@ -2,17 +2,22 @@
 main {
   .container {
     .product {
+      width: 90%;
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-bottom: 2.5em;
+      margin: 0 auto 2em;
       padding: 1.5em 1em 1em;
       @include glassmorphism;
       transition: $transition-medium;
       overflow: hidden;
       cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       .new {
         position: absolute;
@@ -48,16 +53,15 @@ main {
 
       ///// Informations /////
       &__infos {
-        h2 {
-          color: $cream-coffee;
+        h3 {
           text-align: center;
-          margin-bottom: 1.25em;
         }
     
         p {
           color: $cappuccino;
           text-align: justify;
-          margin-bottom: 2.15em;
+          font-size: 0.9em;
+          margin-bottom: 2em;
         }
     
         .tags {
@@ -66,6 +70,7 @@ main {
           flex-wrap: wrap;
           justify-content: left;
           list-style: none;
+          font-size: 0.85em;
     
           li {
             margin-right: 15px;
@@ -87,12 +92,11 @@ main {
   main {
     .container {
       .product {
-        width: 90%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 2em;
-        margin: 0 auto 3em;
+        margin-bottom: 2.5em;
 
         ///// Image /////
         &__image {
@@ -104,13 +108,9 @@ main {
         ///// Informations /////
         &__infos {
           width: 56%;
-
-          h2 {
-            margin-bottom: 1.75em;
-          }
       
           p {
-            margin-bottom: 2.65em;
+            margin-bottom: 2.5em;
           }
       
           .tags {
@@ -148,7 +148,7 @@ main {
 
       .product {
         width: 48.5%;
-        margin: 0 0 3.5em;
+        margin: 0 0 3em;
 
         ///// Image /////
         &__image {
@@ -159,13 +159,9 @@ main {
         ///// Informations /////
         &__infos {
           width: calc(100% - 280px);
-
-          h2 {
-            margin-bottom: 2.25em;
-          }
       
           p {
-            margin-bottom: 3.15em;
+            margin-bottom: 3em;
           }
       
           .tags {
@@ -197,6 +193,10 @@ main {
             transform-origin: top right;
             transform: rotate(-45deg);
           }
+        }
+
+        &:nth-last-child(-n+2) {
+          margin-bottom: 0;
         }
 
         &:hover {

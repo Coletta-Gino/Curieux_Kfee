@@ -26,6 +26,10 @@ header {
 }
 
 main {
+  h1 {
+    font-family: $font-family-title;
+  }
+  
   .errors {
     font-family: $font-family-content;
 
@@ -35,7 +39,8 @@ main {
   }
 
   section {
-    h1 {
+    h1,
+    h2 {
       font-family: $font-family-title;
     }
 
@@ -46,7 +51,7 @@ main {
 
   .wrapper {
     .content {
-      h2 {
+      h3 {
         font-family: $font-family-title;
       }
 
@@ -69,7 +74,7 @@ main {
       }
 
       &__infos {
-        h2 {
+        h3 {
           font-family: $font-family-title;
         }
 

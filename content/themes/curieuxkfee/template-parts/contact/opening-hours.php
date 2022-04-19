@@ -1,6 +1,6 @@
   <!-- Opening Hours -->  
   <ul class="opening-hours">
-    <h2 class="cmon">Venez<span>Nous sommes ouverts !</span></h2>
+    <h3 class="cmon">Venez<span>Nous sommes ouverts !</span></h3>
     
     <?php  
       $args = [

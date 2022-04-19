@@ -1,47 +1,34 @@
-////////// Intro //////////
+////////// Legal Mentions //////////
 main {
-  .intro {
+  .legal-mentions {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     align-items: center;
-    margin-bottom: 2em;
-    padding-bottom: 2em;
-    border-bottom: solid 1px $cappuccino;
-
+  
     p {
       color: $cappuccino;
       text-align: justify;
       margin-bottom: 2em;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
   }
 }
-
+  
 // Tablet
 @media screen and (min-width: $breakpoint-small) {
   main {
-    .intro {
-      margin-bottom: 2.5em;
-      padding-bottom: 2.5em;
-    
+    .legal-mentions {
       p {
         margin-bottom: 2.5em;
       }
     }
   }
 }
-
+  
 // Desktop
 @media screen and (min-width: $breakpoint-medium) {
   main {
-    .intro {
-      margin-bottom: 3em;
-      padding-bottom: 3em;
-    
+    .legal-mentions {
       p {
         margin-bottom: 3em;
       }

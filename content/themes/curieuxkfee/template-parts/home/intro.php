@@ -10,7 +10,7 @@
     ?>
 
     <?php if ($wpqueryArticles->have_posts()): while ($wpqueryArticles->have_posts()): $wpqueryArticles->the_post(); ?>
-      <h1><?php the_title(); ?></h1>
+      <h2><?php the_title(); ?></h2>
       <?php the_content(); ?>
     <?php endwhile; endif; ?>
   </section>

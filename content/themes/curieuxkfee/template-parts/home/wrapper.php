@@ -12,7 +12,7 @@
 
     <?php if ($wpqueryArticles->have_posts()): while ($wpqueryArticles->have_posts()): $wpqueryArticles->the_post(); ?>
       <article class="content">  
-        <h2><?php the_title(); ?></h2>
+        <h3><?php the_title(); ?></h3>
         
         <div class="content__picture">
           <?php the_post_thumbnail(); ?>
