@@ -10,7 +10,7 @@
   ?>
 
   <div class="special-event<?php echo $value; ?>">
-    <a href="#"><i class="fa fa-pause-circle-o fa-2x" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-pause-circle-o fa-2x" aria-hidden="true" title="Stopper/Lancer l'animation"></i></a>
 
     <div class="special-event__items offer">
       <div class="special-event__items__single">

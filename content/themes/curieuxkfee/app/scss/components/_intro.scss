@@ -18,6 +18,19 @@ main {
         margin-bottom: 0;
       }
     }
+
+    a {
+      text-decoration: none;
+      color: $cream;
+      background: linear-gradient(to top, $caramel-coffee 0%, $caramel-coffee 7%, transparent 7.01%) no-repeat;
+      background-size: 0 100%;
+      padding-bottom: 0.15em;
+      transition: background-size $transition-slow;
+
+      &:hover {
+        background-size: $size-hover;
+      }
+    }
   }
 }
 

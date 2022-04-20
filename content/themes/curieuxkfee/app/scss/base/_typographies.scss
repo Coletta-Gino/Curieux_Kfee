@@ -101,6 +101,14 @@ main {
   .contact-us {
     font-family: $font-family-content;
   }
+
+  .results {
+    &__found,
+    a,
+    p {
+      font-family: $font-family-content;
+    }
+  }
 }
 
 footer {

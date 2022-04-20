@@ -25,7 +25,7 @@
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <!-- If there is almost one result -->
     <article class="results__found">
-      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+      <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
     </article>
 
     <?php endwhile; wp_reset_query(); ?>

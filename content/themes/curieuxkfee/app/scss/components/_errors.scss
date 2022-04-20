@@ -1,6 +1,7 @@
 ////////// Errors //////////
 main {
   .errors {
+    width: 90%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -8,9 +9,11 @@ main {
     align-items: center;
     @include glassmorphism;
     padding: 1.5em 1em 1em;
+    margin: 0 auto;
     color: $cream-coffee;
 
     h3 {
+      text-align: center;
       margin-bottom: 1.25em;
     }
 
@@ -42,7 +45,7 @@ main {
 @media screen and (min-width: $breakpoint-small) {
   main {
     .errors {
-      width: 50%;
+      width: 70%;
       margin: 0 auto;
       padding: 2em;
 
