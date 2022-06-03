@@ -1,41 +1,36 @@
-////////// Concepts //////////
+////////// FAQ //////////
 main {
-  .concepts {
+  .faq {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    margin-bottom: 2em;
-
-    h2 {
-      text-align: center;
-    }
-
+  
     p {
-      width: 90%;
       color: $cappuccino;
       text-align: justify;
+      margin-bottom: 2em;
     }
   }
 }
-
+  
 // Tablet
 @media screen and (min-width: $breakpoint-small) {
   main {
-    .concepts {
-      margin-bottom: 2.5em;
+    .faq {
+      p {
+        margin-bottom: 2.5em;
+      }
     }
   }
 }
-
+  
 // Desktop
 @media screen and (min-width: $breakpoint-medium) {
   main {
-    .concepts {
-      margin-bottom: 3em;
-
+    .faq {
       p {
-        width: 100%;
+        margin-bottom: 3em;
       }
     }
   }

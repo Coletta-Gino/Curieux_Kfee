@@ -61,6 +61,14 @@ main {
     }
   }
 
+  .artists {
+    ul {
+      li {
+        font-family: $font-family-content;
+      }
+    }
+  }
+
   .categories {
     button {
       font-family: $font-family-title;

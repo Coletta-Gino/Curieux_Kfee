@@ -19,3 +19,13 @@
     transform: translate(-100%, 0);
   }
 }
+
+// Slide Items For Artists
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(15px);
+  }
+}

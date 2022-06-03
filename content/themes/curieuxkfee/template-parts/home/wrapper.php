@@ -1,5 +1,5 @@
   <!-- Contents -->
-  <div class="wrapper">
+  <section class="wrapper">
     <?php  
       $args = [
         'post_type' => 'post',
@@ -24,4 +24,4 @@
         </div>
       </article>
     <?php endwhile; endif; ?>    
-  </div>
+  </section>

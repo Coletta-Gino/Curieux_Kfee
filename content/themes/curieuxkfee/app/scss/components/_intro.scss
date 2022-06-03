@@ -3,13 +3,18 @@ main {
   .intro {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     margin-bottom: 2em;
     padding-bottom: 2em;
     border-bottom: solid 1px $cappuccino;
 
+    h2 {
+      text-align: center;
+    }
+
     p {
+      width: 90%;
       color: $cappuccino;
       text-align: justify;
       margin-bottom: 2em;
@@ -56,6 +61,7 @@ main {
       padding-bottom: 3em;
     
       p {
+        width: 100%;
         margin-bottom: 3em;
       }
     }

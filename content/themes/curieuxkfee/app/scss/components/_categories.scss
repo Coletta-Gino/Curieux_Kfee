@@ -25,7 +25,9 @@ main {
 
       &:hover,
       &.selected {
-        border: 2.5px solid $caramel-coffee;
+        color: $grey;
+        background-color: $cappuccino;
+        // border: 2.5px solid $caramel-coffee;
         transform: $translateY-mobile;
       }
     }

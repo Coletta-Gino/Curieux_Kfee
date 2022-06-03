@@ -5,9 +5,12 @@ footer {
       list-style: none;
       text-align: center;
       padding-bottom: 0.5em;
+      margin-bottom: 0.5em;
+      text-transform: capitalize;
 
       &:last-child {
         padding-bottom: 0;
+        margin-bottom: 0;
       }
 
       a {
@@ -16,6 +19,10 @@ footer {
 
         &:hover {
           background-size: $size-hover;
+        }
+
+        i {
+          margin-left: 5px;
         }
       }
     }

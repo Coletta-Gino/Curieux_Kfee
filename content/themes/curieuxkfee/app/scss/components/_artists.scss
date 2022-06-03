@@ -1,0 +1,97 @@
+////////// Artists //////////
+main {
+  .artists {
+    h2 {
+      text-align: center;
+    }
+
+    ul {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      font-size: 1em;
+      font-weight: 500;
+      margin: 0 auto;
+  
+      li {
+        background-color: $cappuccino;
+        padding: 5px 10px;
+        margin-bottom: 15px;
+        border-radius: 50px;
+        cursor: pointer;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $grey;
+          text-decoration: none;
+          transition: $transition-slow;
+
+          i {
+            display: none;
+            animation: slideRight $transition-slow both;
+          }
+        }
+
+        &:hover {
+          background-color: $grey;
+          padding: 5px 15px;
+
+          a {
+            color: $cream;
+            margin-right: 1em;
+
+            i {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: $breakpoint-small) {
+  main {
+    .artists {
+      ul {
+        flex-wrap: wrap;
+        flex-direction: row;
+        
+        li {
+          padding: 5.75px 11.5px;
+          margin: 0 17.5px 17.5px 0;
+
+          &:hover {
+            padding: 5.75px 16.5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: $breakpoint-medium) {
+  main {
+    .artists {
+      ul {
+        width: 100%;
+          
+        li {
+          padding: 6.5px 13px;
+          margin: 0 20px 20px 0;
+
+          &:hover {
+            padding: 6.5px 18px;
+          }
+        }
+      }
+    }
+  }
+}

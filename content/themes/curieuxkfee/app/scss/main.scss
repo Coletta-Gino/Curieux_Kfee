@@ -24,23 +24,26 @@
 // 5. Components
 @import 
   'components/anchor',
+  'components/artists',
   'components/banner',
   'components/categories',
   'components/concepts',
   'components/contact-us',
   'components/content',
   'components/copyright',
-  'components/errors',
   'components/events',
   'components/intro',
-  'components/legal-mentions',
   'components/links',
   'components/map',
   'components/nav',
   'components/opening-hours',
   'components/product',
-  'components/results',
   'components/simplified-logo',
   'components/social-media';
 
 // 6. Pages
+@import 
+  'pages/errors',
+  'pages/faq',
+  'pages/legal-mentions',
+  'pages/results';
