@@ -3,7 +3,7 @@
         // TODO => be careful to change the value of 'parent' = the id of the ephemerals category !!!
         $taxonomies = get_terms([
           'taxonomy' => 'category',
-          'parent' => 18,
+          'parent' => 8,
           'hide_empty' => false
         ]);
         

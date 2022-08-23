@@ -18,13 +18,19 @@
         "wpackagist-plugin/akismet": "*",
         "wpackagist-plugin/advanced-custom-fields": "*",
         "wpackagist-plugin/advanced-custom-fields-font-awesome": "*",
-        "wpackagist-plugin/wordpress-seo": "*"
+        "wpackagist-plugin/wordpress-seo": "^19.6"
     },
     "extra" : {
         "wordpress-install-dir": "wp",
         "installer-paths": {
             "content/themes/{$name}": ["type:wordpress-theme"],
             "content/plugins/{$name}": ["type:wordpress-plugin"]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "johnpbloch/wordpress-core-installer": true
         }
     }
 }

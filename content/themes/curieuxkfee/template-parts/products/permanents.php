@@ -3,7 +3,7 @@
         // TODO => be careful to change the value of 'parent' = the id of the permanents category !!!
         $taxonomies = get_terms([
           'taxonomy' => 'category',
-          'parent' => 19,
+          'parent' => 9,
           'hide_empty' => false
         ]);
         
