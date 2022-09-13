@@ -18,7 +18,7 @@
         "wpackagist-plugin/akismet": "*",
         "wpackagist-plugin/advanced-custom-fields": "*",
         "wpackagist-plugin/advanced-custom-fields-font-awesome": "*",
-        "wpackagist-plugin/wordpress-seo": "^19.6"
+        "wpackagist-plugin/wordpress-seo": "*"
     },
     "extra" : {
         "wordpress-install-dir": "wp",
