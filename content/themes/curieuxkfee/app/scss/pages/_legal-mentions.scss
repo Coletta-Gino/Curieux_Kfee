@@ -10,6 +10,19 @@ main {
       color: $cappuccino;
       text-align: justify;
       margin-bottom: 2em;
+
+      a {
+        font-size: 0.85em;
+        @include basic-underline;
+
+        &:hover {
+          background-size: $size-hover;
+        }
+
+        i {
+          margin-left: 5px;
+        }
+      }
     }
   }
 }
