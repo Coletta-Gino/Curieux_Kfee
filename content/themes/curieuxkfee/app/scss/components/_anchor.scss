@@ -8,9 +8,9 @@ footer {
     a {
       @include item-in-a-circle;
 
-      &::before {
-        @include before-in-circles;
-      }
+      // &::before {
+      //   @include before-in-circles;
+      // }
 
       &:hover {
         transform: $translateY-mobile;

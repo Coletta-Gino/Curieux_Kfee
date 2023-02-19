@@ -14,9 +14,9 @@ footer {
         margin-left: 0;
       }
 
-      &::before {
-        @include before-in-circles;
-      }
+      // &::before {
+      //   @include before-in-circles;
+      // }
 
       &:hover {
         transform: $translateY-mobile;
