@@ -1,5 +1,6 @@
 # Curieux KFée's Website
-This repository contains the code for the [Curieux KFée](https://curieuxkfee.fr/) website, an online platform designed to showcase the offerings of the coffee-shop located in Salaise-sur-Sanne, in France. The website aims to provide visitors with an immersive experience, introducing them to the unique atmosphere, products, events, and featured artists of the establishment.
+
+This repository contains the code for the [Curieux KFée](https://curieuxkfee.fr/) website, an online platform designed to showcase the offerings of the coffee-shop located in Salaise-sur-Sanne, France. The website provides an immersive digital experience, allowing visitors to explore the ambiance, products, events, and featured artists of the establishment.
 
 ## Table of Contents
 - [Curieux KFée's Website](#curieux-kfées-website)
@@ -10,21 +11,26 @@ This repository contains the code for the [Curieux KFée](https://curieuxkfee.fr
   - [Technologies Used](#technologies-used)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [Screenshots](#screenshots)
+    - [Mobile Version](#mobile-version)
+    - [Tablet Version](#tablet-version)
+    - [Desktop Version](#desktop-version)
+  - [Contact](#contact)
   - [Credits](#credits)
 
 ## Introduction
-Curieux KFée is the fusion of a tea room and a boutique featuring local creators. You can also enjoy pastries. The website serves as a digital storefront, welcoming visitors to explore the coffee-shop's offerings and events and learn more about its ethos.
+Curieux KFée is a fusion of a tea room and a boutique featuring local creators, offering a warm and inviting atmosphere. Visitors can also enjoy handcrafted pastries. This website serves as the digital gateway to the coffee shop, providing insights into its unique concept and the various events it hosts.
 
 ## Features
-- **Homepage**: The homepage features a banner showcasing the essence of Curieux KFée, along with introductory text about the founder and the unique concepts behind the coffee-shop. It includes sections for permanent and ephemeral products, as well as the featured artists of the month.
-- **Product Pages**: Separate pages are dedicated to permanent and ephemeral products. These pages utilize functionality to randomly display products and provide a filtering system to allow users to view products based on categories.
-- **Contact Page**: The contact page offers essential information such as opening hours, address, and a map for easy navigation. Additionally, users can contact the coffee shop via email or phone using the provided links.
+- **Homepage**: A visually engaging introduction featuring a banner, a welcome message from the founder, and highlights of both permanent and ephemeral products. The featured artist of the month is also showcased.
+- **Product Pages**: Dedicated pages for permanent and ephemeral products, featuring dynamic randomization and filtering to enhance user navigation.
+- **Contact Page**: Provides essential details such as opening hours, address, and an interactive map. Users can contact the coffee shop directly via email or phone through clickable links.
 
 ## Pages
-1. **Homepage**: Introduces the coffee shop, its founder, concepts, and featured artists.
-2. **Permanent Products**: Showcases permanent products available at the coffee shop.
-3. **Ephemeral Products**: Displays temporary products or specials offered by the coffee shop.
-4. **Contact**: Provides contact information, including opening hours, address, and communication links.
+1. **Homepage**: Overview of the coffee shop, its founder, core values, and highlighted artists.
+2. **Permanent Products**: A detailed display of products consistently available at the shop.
+3. **Ephemeral Products**: Showcases limited-time offers and seasonal products.
+4. **Contact**: Provides location details, opening hours, and contact options.
 
 ## Technologies Used
 - HTML
@@ -40,23 +46,38 @@ Curieux KFée is the fusion of a tea room and a boutique featuring local creator
 - Composer
 
 ## Installation
-1. Make sure you have composer, npm, and webpack installed on your machine.
-2. Clone the repository
+1. Ensure that you have Composer, NPM, and Webpack installed on your system.
+2. Clone the repository.
 3. Navigate to the project directory in your terminal.
-4. Run `composer install` to install WordPress, its plugins, its themes.
+4. Run `composer install` to install WordPress, plugins, and themes.
 5. Set up your MySQL database.
-6. Update the database connection details in the `wp-config.php` file (copy of `wp-config-sample.php`).
+6. Update the database connection details in the `wp-config.php` file (use a copy of `wp-config-sample.php`).
 7. Navigate to the theme directory in your terminal.
 8. Run `npm install` to install dependencies.
 
 ## Usage
-1. Configure the WordPress back-office to manage content dynamically.
-2. Customize the theme settings and content to align with Curieux KFée's branding and offerings.
-3. **As this code is provided as an example of our capabilities, it cannot be hosted online or used for commercial purposes without the consent of CurieuxKFée and XiaoDev.**
+1. Configure the WordPress back-office to dynamically manage content.
+2. Customize theme settings and content to align with Curieux KFée’s branding and offerings.
+3. **This code is provided as an example of our capabilities and may not be hosted online or used for commercial purposes without the explicit consent of both Curieux KFée and XiaoDev.**
+
+## Screenshots
+Here are some previews of the website on different devices:
+
+### Mobile Version
+![Curieux KFée - Mobile](CurieuxKFée_Mobile.png)
+
+### Tablet Version
+![Curieux KFée - Tablet](CurieuxKFée_Tablet.png)
+
+### Desktop Version
+![Curieux KFée - Desktop](CurieuxKFée_Desktop.png)
+
+## Contact
+For inquiries regarding this project, please reach out via email:  
+📩 contact@xiaodev.fr
 
 ## Credits
 The Curieux KFée's Website was created and maintained by XiaoDev.
 
 ---
-
-If you have any questions or feedback, please don't hesitate to [reach out](mailto:&#99;o&#110;&#116;%61%63t&#64;&#120;&#105;a&#111;&#100;%65%76%2e&#102;%72).
+If you have any questions or feedback, please [reach out](mailto:&#99;o&#110;&#116;%61%63t&#64;&#120;&#105;a&#111;&#100;%65%76%2e&#102;%72).
